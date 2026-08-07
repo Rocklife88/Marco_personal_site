@@ -22,7 +22,30 @@ useHead({
       name: 'description',
       content: computed(() => book.value?.sinossi ?? '')
     }
-  ]
+  ],
+  script: computed(() =>
+    book.value
+      ? [
+          {
+            type: 'application/ld+json' as 'application/json',
+            innerHTML: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Book',
+              name: book.value.titolo,
+              author: {
+                '@type': 'Person',
+                name: 'Marco Pellegrini'
+              },
+              datePublished: String(book.value.anno),
+              publisher: book.value.editore,
+              description: book.value.sinossi,
+              image: book.value.copertina,
+              url: `https://marcopellegrini.vercel.app/libri/${book.value.slug}`
+            })
+          }
+        ]
+      : []
+  )
 })
 </script>
 

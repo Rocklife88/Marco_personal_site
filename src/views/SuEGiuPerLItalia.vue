@@ -7,7 +7,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Su e giù per l\'Italia: il progetto di viaggio di Marco Pellegrini attraverso le regioni italiane, tra video e racconti.'
+      content: 'Su e giù per l\'Italia: il progetto di viaggio di Marco Pellegrini attraverso le regioni italiane, tra video su YouTube e podcast su Spotify.'
     }
   ]
 })
@@ -24,29 +24,45 @@ useHead({
         attraverso le cartoline.
       </p>
       <p>
-        Il racconto del percorso continua sul blog e sul canale YouTube del
-        progetto.
+        Il racconto del percorso continua sul canale YouTube e sul podcast,
+        disponibile anche su Spotify.
       </p>
-      <div class="flex flex-wrap gap-3 pt-2">
-        <a
-          v-if="links.youtube"
-          :href="links.youtube"
-          target="_blank"
-          rel="noopener"
-          class="rounded-md bg-terracotta px-4 py-2 text-sm font-medium text-white hover:bg-terracotta-dark"
-        >
-          Guarda su YouTube
-        </a>
-        <a
-          v-if="links.altervista"
-          :href="links.altervista"
-          target="_blank"
-          rel="noopener"
-          class="rounded-md border border-terracotta px-4 py-2 text-sm font-medium text-terracotta hover:bg-terracotta/10"
-        >
-          Leggi il blog
-        </a>
-      </div>
+    </div>
+
+    <div class="mt-8 grid gap-4 sm:grid-cols-2">
+      <a
+        v-if="links.youtube"
+        :href="links.youtube"
+        target="_blank"
+        rel="noopener"
+        class="flex flex-col gap-1 rounded-xl border border-ocra/20 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg"
+      >
+        <span class="text-xs uppercase tracking-wide text-ink/50">YouTube</span>
+        <span class="font-semibold text-ink">Su e giù per l'Italia con Marco</span>
+        <span class="mt-1 text-sm text-terracotta">Guarda i video &rarr;</span>
+      </a>
+      <a
+        v-if="links.spotify"
+        :href="links.spotify"
+        target="_blank"
+        rel="noopener"
+        class="flex flex-col gap-1 rounded-xl border border-ocra/20 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg"
+      >
+        <span class="text-xs uppercase tracking-wide text-ink/50">Spotify / Podcast</span>
+        <span class="font-semibold text-ink">Su e giù per l'Italia</span>
+        <span class="mt-1 text-sm text-terracotta">Ascolta il podcast &rarr;</span>
+      </a>
+      <a
+        v-if="links.altervista"
+        :href="links.altervista"
+        target="_blank"
+        rel="noopener"
+        class="flex flex-col gap-1 rounded-xl border border-ocra/20 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg sm:col-span-2"
+      >
+        <span class="text-xs uppercase tracking-wide text-ink/50">Blog</span>
+        <span class="font-semibold text-ink">Il diario del viaggio</span>
+        <span class="mt-1 text-sm text-terracotta">Leggi il blog &rarr;</span>
+      </a>
     </div>
   </div>
 </template>

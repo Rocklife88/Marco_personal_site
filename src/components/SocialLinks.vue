@@ -32,6 +32,15 @@ import links from '../data/links'
       Substack
     </a>
     <a
+      v-if="links.spotify"
+      :href="links.spotify"
+      target="_blank"
+      rel="noopener"
+      class="text-ink hover:text-terracotta"
+    >
+      Spotify
+    </a>
+    <a
       v-if="links.email"
       :href="`mailto:${links.email}`"
       class="text-ink hover:text-terracotta"

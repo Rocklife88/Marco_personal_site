@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import type { Book } from '../data/books'
 
 const props = defineProps<{ book: Book }>()
+
+const imageFailed = ref(false)
 
 const stores = [
   { key: 'ibs', label: 'IBS' },
@@ -17,11 +20,19 @@ const availableStores = stores
 
 <template>
   <article class="mx-auto flex max-w-3xl flex-col gap-8 px-6 py-12 sm:flex-row">
-    <img
-      :src="book.copertina"
-      :alt="`Copertina di ${book.titolo}`"
-      class="aspect-[2/3] w-full max-w-xs self-start rounded-lg object-cover shadow"
-    />
+    <div class="aspect-[2/3] w-full max-w-xs self-start overflow-hidden rounded-lg bg-gradient-to-br from-terracotta/15 to-ocra/15 shadow">
+      <img
+        v-if="!imageFailed"
+        :src="book.copertina"
+        :alt="`Copertina di ${props.book.titolo}`"
+        class="h-full w-full object-cover"
+        @error="imageFailed = true"
+      />
+      <div v-else class="flex h-full w-full flex-col items-center justify-center gap-2 p-4 text-center">
+        <span class="text-xs uppercase tracking-wide text-ink/40">Marco Pellegrini</span>
+        <span class="font-semibold text-ink">{{ book.titolo }}</span>
+      </div>
+    </div>
     <div class="flex flex-1 flex-col gap-4">
       <div>
         <h1 class="text-3xl font-semibold text-ink">{{ book.titolo }}</h1>
