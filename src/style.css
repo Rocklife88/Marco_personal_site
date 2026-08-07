@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-terracotta: #c2542d;
+  --color-terracotta-dark: #9a3f20;
+  --color-ocra: #d99a3f;
+  --color-cream: #faf5ee;
+  --color-ink: #211a16;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
