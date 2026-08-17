@@ -23,29 +23,26 @@ useHead({
     <div class="grid gap-10 lg:grid-cols-[1.3fr_0.9fr] lg:items-start">
       <div class="space-y-5 text-lg leading-relaxed text-ink/75">
         <p>
-          Scrivo da sempre — da quando ero all'asilo, molto prima che mi passasse per la testa di pubblicare
-          qualcosa. Sono di Lucca, e ho esordito nel 2020 con
-          <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>,
-          due sconosciuti che si scontrano sul ponte di un traghetto e scoprono di stare cercando, ognuno a modo suo,
-          di rimettere insieme una vita spezzata. È un tema a cui torno spesso: persone sorprese in un punto di
-          svolta, in bilico tra quello che ci si aspetta da loro e quello che sentono davvero di volere. Lo ritrovo in
-          <router-link to="/libri/quello-che-resta" class="font-medium text-accent hover:underline">Quello che resta</router-link>,
-          e di nuovo in <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-accent hover:underline">In un giorno qualunque</router-link>.
-        </p>
-        <p>
-          Da una mansarda a Verona, durante il lockdown del marzo 2020, sono nati
+          Scrivo da sempre, da quando ero all'asilo, molto prima di sapere cosa significasse davvero scrivere,
+          prima ancora di chiedermi se ne sarebbe mai uscito qualcosa di serio. Sono cresciuto a Lucca, e da lì non
+          mi sono mai davvero mosso, nemmeno quando ho iniziato a girare l'Italia in lungo e in largo: perché in
+          fondo, ho capito col tempo, si scrive sempre dello stesso posto — quello che ci si porta dentro. Nel 2020
+          ho pubblicato il mio primo romanzo,
+          <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>
+          — due sconosciuti che si scontrano sul ponte di un traghetto, ognuno a modo suo in cerca di rimettere
+          insieme una vita spezzata — ed è un tema a cui continuo a tornare, in
+          <router-link to="/libri/quello-che-resta" class="font-medium text-accent hover:underline">Quello che resta</router-link>
+          come in <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-accent hover:underline">In un giorno qualunque</router-link>:
+          persone sorprese in un punto di svolta, in bilico tra quello che ci si aspetta da loro e quello che
+          sentono davvero di volere. Poi c'è stato un sabato di marzo del 2020, chiuso in una mansarda a Verona con
+          le finestre spalancate su una città deserta, e il bisogno improvviso di riportare a galla la bellezza di
+          tutti i viaggi fatti fino ad allora: da lì sono nati
           <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d'Italia</router-link>
-          e <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
-          il progetto che porto avanti insieme al magazine
-          <a href="https://www.lordinario.it/luoghi/emozioni-ditalia-1-omaggio-a-lucca/" target="_blank" rel="noopener" class="font-medium text-accent hover:underline">L'Ordinario</a>,
-          per cui scrivo e fotografo i luoghi d'Italia nella rubrica Luoghi. Quello che ci trovi non è una guida:
-          sono strade, persone e atmosfere raccontate perché tu possa riconoscerti — e magari ritrovare la voglia
-          di partire, o semplicemente guardare il posto in cui vivi con occhi nuovi.
-        </p>
-        <p>
-          Ho imparato che una voce, per essere forte, deve essere solo tua. Puoi giocare con lo stile, con le parole,
-          stendere sul filo una bella storia — ma è quando trovi la tua voce che inizi davvero a viaggiare. Ed è lì
-          che, ogni volta, ricomincio.
+          e, insieme, <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
+          il progetto che porto avanti con il magazine
+          <a href="https://www.lordinario.it/luoghi/emozioni-ditalia-1-omaggio-a-lucca/" target="_blank" rel="noopener" class="font-medium text-accent hover:underline">L'Ordinario</a>.
+          Quello che ci trovi non è mai una guida: sono strade, persone e atmosfere raccontate perché chi legge
+          possa riconoscersi — e magari, per un momento, guardare il posto in cui vive con occhi nuovi.
         </p>
       </div>
 
