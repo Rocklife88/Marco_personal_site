@@ -13,6 +13,8 @@
   --color-terracotta-dark: var(--terracotta-dark);
   --color-ocra: var(--ocra);
   --color-azzurro: var(--azzurro);
+  --color-blu: var(--blu);
+  --color-verde: var(--verde);
   --color-cream: var(--cream);
   --color-ink: var(--ink);
   --color-surface: var(--surface);
@@ -25,22 +27,27 @@
 :root {
   color-scheme: light;
 
-  /* Terracotta + ocra (terra, sole) and a Mediterranean azzurro (mare, cielo):
-     the three colors of an Italian journey. */
+  /* Terracotta + ocra (terra, sole) and a Mediterranean azzurro (mare, cielo)
+     stay as the site's warm identity; blu/verde are the primary accent,
+     swapped by theme: an intense blue on light, an accessible green on dark. */
   --terracotta: #b0482a;
   --terracotta-dark: #8a381f;
   --ocra: #c98f3c;
   --azzurro: #29708a;
+  --blu: #1d4ed8;
+  --blu-dark: #15328a;
+  --verde: #34d399;
+  --verde-dark: #15803d;
   --cream: #fffdfa;
   --ink: #201812;
   --surface: #ffffff;
 
   --bg: var(--cream);
-  --accent: var(--terracotta);
-  --accent-dark: var(--terracotta-dark);
+  --accent: var(--blu);
+  --accent-dark: var(--blu-dark);
   --muted: rgba(32, 24, 18, 0.62);
   --border: rgba(32, 24, 18, 0.08);
-  --focus: 3px solid rgba(176, 72, 42, 0.2);
+  --focus: 3px solid rgba(29, 78, 216, 0.22);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,16 +58,20 @@
     --terracotta-dark: #b85a2b;
     --ocra: #e5ae63;
     --azzurro: #6ec4dd;
+    --blu: #5b8fe0;
+    --blu-dark: #3f6fc4;
+    --verde: #34d399;
+    --verde-dark: #15803d;
     --cream: #0a0806;
     --ink: #f2e8dd;
     --surface: #16110c;
 
     --bg: var(--cream);
-    --accent: var(--terracotta);
-    --accent-dark: var(--terracotta-dark);
+    --accent: var(--verde);
+    --accent-dark: var(--verde-dark);
     --muted: rgba(242, 232, 221, 0.66);
     --border: rgba(242, 232, 221, 0.1);
-    --focus: 3px solid rgba(227, 128, 82, 0.24);
+    --focus: 3px solid rgba(52, 211, 153, 0.28);
   }
 }
 
@@ -72,16 +83,20 @@
   --terracotta-dark: #b85a2b;
   --ocra: #e5ae63;
   --azzurro: #6ec4dd;
+  --blu: #5b8fe0;
+  --blu-dark: #3f6fc4;
+  --verde: #34d399;
+  --verde-dark: #15803d;
   --cream: #0a0806;
   --ink: #f2e8dd;
   --surface: #16110c;
 
   --bg: var(--cream);
-  --accent: var(--terracotta);
-  --accent-dark: var(--terracotta-dark);
+  --accent: var(--verde);
+  --accent-dark: var(--verde-dark);
   --muted: rgba(242, 232, 221, 0.66);
   --border: rgba(242, 232, 221, 0.1);
-  --focus: 3px solid rgba(227, 128, 82, 0.24);
+  --focus: 3px solid rgba(52, 211, 153, 0.28);
 }
 
 :root {
