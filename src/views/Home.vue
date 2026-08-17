@@ -125,7 +125,7 @@ useHead({
 
     <section class="mx-auto mt-20 max-w-2xl text-center">
       <p class="font-display text-2xl italic leading-snug text-ink sm:text-3xl">
-        “Non può essere autentica e forte se non è la tua.”
+        “Vale per tutto, anche per la voce che decidi di avere come autore. Non può essere autentica e forte se non è la tua.”
       </p>
       <p class="eyebrow mt-4 justify-center text-ink/40">— dal mio taccuino</p>
     </section>
