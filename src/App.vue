@@ -2,6 +2,7 @@
 import Header from './components/layout/Header.vue'
 import Footer from './components/layout/Footer.vue'
 import Loader from './components/Loader.vue'
+import ItalyMapBackground from './components/ItalyMapBackground.vue'
 import { useLoading } from './composables/useLoading'
 
 const { isLoading } = useLoading()
@@ -9,6 +10,7 @@ const { isLoading } = useLoading()
 
 <template>
   <div class="flex min-h-screen flex-col">
+    <ItalyMapBackground />
     <Header />
     <main class="flex-1">
       <router-view />
