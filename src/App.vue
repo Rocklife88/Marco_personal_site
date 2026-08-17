@@ -10,7 +10,7 @@ const { isLoading } = useLoading()
 </script>
 
 <template>
-  <div class="flex min-h-screen flex-col">
+  <div class="relative flex min-h-screen flex-col">
     <ItalyMapBackground />
     <Header />
     <main class="flex-1">

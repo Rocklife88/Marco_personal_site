@@ -69,14 +69,12 @@ const cities = [
 
 <style scoped>
 .italy-map-bg {
-  position: fixed;
+  position: absolute;
   top: var(--header-height, 4.5rem);
-  right: 0;
-  bottom: 0;
   left: 0;
   z-index: 0;
   width: 100%;
-  height: auto;
+  height: 100vh;
   color: var(--ink);
   opacity: 0.1;
   pointer-events: none;

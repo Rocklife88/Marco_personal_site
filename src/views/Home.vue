@@ -62,7 +62,7 @@ useHead({
     </section>
 
     <div class="mx-auto max-w-6xl px-6 py-16">
-    <section class="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+    <section v-reveal class="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
       <div>
         <p class="mt-5 max-w-2xl text-lg leading-relaxed text-ink/70">
           Libri e viaggi si somigliano: nessuno dei due si lascia davvero pianificare. Prendono entrambi pieghe
@@ -91,7 +91,7 @@ useHead({
       </div>
     </section>
 
-    <section class="mt-16">
+    <section v-reveal class="mt-16">
       <div class="mb-5 flex items-end justify-between gap-4">
         <h2 class="text-2xl font-semibold tracking-tight text-ink">I canali del viaggio</h2>
       </div>
@@ -113,7 +113,7 @@ useHead({
       </div>
     </section>
 
-    <section class="mt-16">
+    <section v-reveal class="mt-16">
       <div class="mb-5 flex items-end justify-between gap-4">
         <h2 class="text-2xl font-semibold tracking-tight text-ink">Ultime riflessioni dal blog</h2>
         <router-link to="/blog" class="link-arrow">Vedi tutti <ArrowRight :size="14" /></router-link>
@@ -135,14 +135,14 @@ useHead({
       </div>
     </section>
 
-    <section class="mx-auto mt-20 max-w-2xl text-center">
+    <section v-reveal class="mx-auto mt-20 max-w-2xl text-center">
       <p class="font-display text-2xl italic leading-snug text-ink sm:text-3xl">
         “Vale per tutto, anche per la voce che decidi di avere come autore. Non può essere autentica e forte se non è la tua.”
       </p>
       <p class="eyebrow mt-4 justify-center text-ink/40">— dal mio taccuino</p>
     </section>
 
-    <section v-if="latestBook" class="card mt-20 p-6 sm:p-8">
+    <section v-if="latestBook" v-reveal class="card mt-20 p-6 sm:p-8">
       <div class="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
         <div class="max-w-xl">
           <p class="eyebrow mb-2"><BookOpen :size="15" /> Ultimo libro</p>
@@ -155,7 +155,7 @@ useHead({
       </div>
     </section>
 
-    <section class="mt-16">
+    <section v-reveal class="mt-16">
       <div class="mb-5 flex items-end justify-between gap-4">
         <h2 class="text-2xl font-semibold tracking-tight text-ink">I miei libri</h2>
         <router-link to="/libri" class="link-arrow">Vedi catalogo <ArrowRight :size="14" /></router-link>
@@ -165,7 +165,7 @@ useHead({
           v-for="book in books"
           :key="book.slug"
           :book="book"
-          class="w-40 shrink-0 snap-start sm:w-52"
+          class="w-48 shrink-0 snap-start sm:w-60"
         />
       </div>
     </section>
