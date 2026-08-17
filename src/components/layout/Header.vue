@@ -46,7 +46,7 @@ onMounted(() => {
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
       <router-link to="/" class="group flex items-center gap-2.5">
         <Logo :size="34" class="transition group-hover:scale-105" />
-        <span class="font-display text-lg font-semibold italic tracking-tight text-ink transition group-hover:text-accent">
+        <span class="font-display text-xl font-medium italic tracking-tight text-ink transition group-hover:text-accent">
           Marco Pellegrini
         </span>
       </router-link>

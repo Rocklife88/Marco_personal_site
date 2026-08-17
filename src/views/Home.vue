@@ -44,19 +44,19 @@ useHead({
 
 <template>
   <div>
-    <section class="relative flex min-h-[calc(100svh-var(--header-height,4.5rem))] items-end overflow-hidden">
+    <section class="relative flex min-h-[calc(100svh-var(--header-height,4.5rem))] items-center overflow-hidden">
       <img
         src="https://mpcopy.wordpress.com/wp-content/uploads/2021/12/74534330_10211782845525349_8983003998860607488_n.jpg"
         alt="Marco Pellegrini"
         class="hero-image-in absolute inset-0 h-full w-full object-cover"
       />
       <div class="hero-overlay absolute inset-0" />
-      <div class="relative mx-auto flex w-full max-w-6xl flex-col items-center px-6 pb-16 pt-32 text-center sm:px-10 sm:pb-20 lg:px-12">
-        <h1 class="hero-type text-5xl font-semibold tracking-tight text-white sm:text-7xl lg:text-8xl">
+      <div class="relative mx-auto flex w-full max-w-6xl flex-col items-start px-6 sm:px-10 lg:px-16">
+        <h1 class="hero-type text-5xl font-semibold leading-tight tracking-tight text-white sm:text-7xl lg:text-8xl lg:leading-tight">
           Marco Pellegrini
         </h1>
-        <p class="hero-in mt-5 inline-flex w-fit items-center justify-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-white/90" style="animation-delay: 1.6s">
-          Scrittore · storie in viaggio
+        <p class="hero-in mt-6 inline-flex w-fit items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-white/90" style="animation-delay: 1.6s">
+          Storie in viaggio
         </p>
       </div>
     </section>
