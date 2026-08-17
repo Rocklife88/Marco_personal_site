@@ -50,13 +50,13 @@ useHead({
         alt="Marco Pellegrini a un incontro letterario"
         class="absolute inset-0 h-full w-full object-cover"
       />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
+      <div class="hero-overlay absolute inset-0" />
       <div class="relative mx-auto w-full max-w-6xl px-6 pb-16 pt-32 sm:px-10 sm:pb-20 lg:px-12">
         <p class="hero-in mb-4 inline-flex w-fit items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-white/90" style="animation-delay: 0s">
-          <Compass :size="15" /> Scrittore · storie in viaggio
+          Scrittore · storie in viaggio
         </p>
-        <h1 class="hero-in max-w-2xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-7xl" style="animation-delay: .12s">
-          Scrivere è come partire per un viaggio che non pianifichi.
+        <h1 class="hero-type text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-7xl">
+          Marco Pellegrini
         </h1>
       </div>
     </section>
@@ -83,8 +83,8 @@ useHead({
       <div class="relative">
         <div class="overflow-hidden rounded-[28px] border border-surface/60 bg-surface/70 p-3 shadow-[0_24px_60px_rgba(33,26,22,0.12)] backdrop-blur-sm">
           <img
-            src="/images/hero/FB6E7B15-95B4-4F74-B66B-4E8FA88AE540.jpg"
-            alt="Marco Pellegrini al lavoro, di notte"
+            src="https://mpcopy.wordpress.com/wp-content/uploads/2021/12/74534330_10211782845525349_8983003998860607488_n.jpg"
+            alt="Marco Pellegrini"
             class="h-[420px] w-full rounded-[20px] object-cover object-center"
           />
         </div>

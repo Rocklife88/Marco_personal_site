@@ -181,6 +181,37 @@ img { display: block; max-width: 100%; }
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Full-screen photo hero: a dark scrim tinted with the accent, not flat black */
+.hero-overlay {
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--accent) 30%, black 70%) 0%,
+    color-mix(in srgb, var(--accent) 16%, black 55%) 45%,
+    color-mix(in srgb, var(--accent) 6%, black 30%) 100%
+  );
+}
+
+/* Hero title: types itself in, like a page being written, then the cursor blinks a while */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-type {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 16ch;
+    white-space: nowrap;
+    border-right: 2px solid var(--accent);
+    animation:
+      hero-type-width 1.3s steps(16, end) 0.3s both,
+      hero-type-caret 0.8s step-end 0.3s 4;
+  }
+}
+@keyframes hero-type-width {
+  from { max-width: 0; }
+  to { max-width: 16ch; }
+}
+@keyframes hero-type-caret {
+  50% { border-color: transparent; }
+}
+
 /* Accent helpers */
 .accent { color: var(--accent); }
 
