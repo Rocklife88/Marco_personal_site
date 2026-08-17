@@ -23,18 +23,6 @@ useHead({
     <div class="grid gap-10 lg:grid-cols-[1.3fr_0.9fr] lg:items-start">
       <div class="space-y-5 text-lg leading-relaxed text-ink/75">
         <p>
-          Scrivere un libro è come partire per uno di quei viaggi che non pianifichi: quelli che non hanno
-          aspettative e che, proprio per questo, finiscono per cambiarti la vita. Non ho mai avuto mappe, riferimenti
-          o bussole per orientarmi in una storia — ho sempre pensato che tracciare perimetri, colorare ambienti, dare
-          forma a personaggi ed emozioni non fosse compito mio, ma della pagina.
-        </p>
-        <p>
-          A trent'anni, qualcosa in me è cambiato: ho smesso di essere un viaggiatore pesante. Dalla valigia — e
-          dalla piccola casa in cui vivo — hanno iniziato a sparire un sacco di cose inutili, tenute lì solo per
-          abitudine. Quello che è rimasto è stato spazio nuovo, per le cose che contano davvero. Uso lo stesso
-          principio quando scrivo: togliere il superfluo finché non resta l'essenziale.
-        </p>
-        <p>
           Mi chiamo Marco Pellegrini, sono nato a Lucca, e scrivo da sempre — da quando ero all'asilo, molto prima che
           mi passasse per la testa di pubblicare qualcosa. Ho esordito nel 2020 con
           <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>,
@@ -45,14 +33,14 @@ useHead({
           e di nuovo in <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-accent hover:underline">In un giorno qualunque</router-link>.
         </p>
         <p>
-          Il motivo per cui ho scritto <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d'Italia</router-link>,
-          in particolare, lo so con precisione: un sabato di marzo del 2020, chiuso in una mansarda a Verona, con le
-          finestre spalancate su una città deserta e silenziosa, avevo bisogno di riportare a galla la bellezza dei
-          viaggi che avevo fatto, per affrontare quei giorni fermi. Da lì è nato anche
-          <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
+          Da una mansarda a Verona, durante il lockdown del marzo 2020, sono nati
+          <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d'Italia</router-link>
+          e <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
           il progetto che porto avanti insieme al magazine
           <a href="https://www.lordinario.it/luoghi/emozioni-ditalia-1-omaggio-a-lucca/" target="_blank" rel="noopener" class="font-medium text-accent hover:underline">L'Ordinario</a>,
-          per cui scrivo e fotografo i luoghi d'Italia nella rubrica Luoghi.
+          per cui scrivo e fotografo i luoghi d'Italia nella rubrica Luoghi. Quello che ci trovi non è una guida:
+          sono strade, persone e atmosfere raccontate perché tu possa riconoscerti — e magari ritrovare la voglia
+          di partire, o semplicemente guardare il posto in cui vivi con occhi nuovi.
         </p>
         <p>
           Ho imparato che una voce, per essere forte, deve essere solo tua. Puoi giocare con lo stile, con le parole,
