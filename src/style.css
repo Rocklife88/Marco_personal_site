@@ -121,9 +121,18 @@ img { display: block; max-width: 100%; }
 #app { min-height: 100vh; }
 
 /* `white`/`black` aren't part of the editorial palette, so keep them mapped
-   to the theme-aware surface/ink so cards and buttons still adapt. */
-.bg-white { background-color: var(--surface) !important; }
-.bg-white\/70 { background-color: color-mix(in srgb, var(--surface) 70%, transparent) !important; }
+   to the theme-aware surface/ink so cards and buttons still adapt. Translucent
+   + blurred like .card, so the map behind stays visible, softly, everywhere. */
+.bg-white {
+  background-color: color-mix(in srgb, var(--surface) 85%, transparent) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.bg-white\/70 {
+  background-color: color-mix(in srgb, var(--surface) 60%, transparent) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
 .border-white\/60 { border-color: color-mix(in srgb, var(--surface) 60%, transparent) !important; }
 
 /* Header surface helper */
@@ -214,11 +223,15 @@ img { display: block; max-width: 100%; }
 }
 .eyebrow svg { width: 0.95rem; height: 0.95rem; }
 
-/* Editorial card: soft, not heavy — a thin border does the work, the shadow is a whisper */
+/* Editorial card: soft, not heavy — a thin border does the work, the shadow is a whisper.
+   Background is translucent with a blur so the map behind stays faintly visible without
+   ever fighting the text sitting on top of it. */
 .card {
   border: 1px solid var(--border);
   border-radius: 22px;
-  background: var(--surface);
+  background: color-mix(in srgb, var(--surface) 85%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 1px 2px rgba(20, 14, 8, 0.03);
 }
 
