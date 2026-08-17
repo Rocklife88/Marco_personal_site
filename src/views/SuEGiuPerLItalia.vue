@@ -30,23 +30,25 @@ useHead({
       </p>
     </header>
 
-    <div class="mt-12 max-w-3xl space-y-5 text-lg leading-relaxed text-ink/75">
-      <p>
-        Questo progetto è nato così: alla soglia dei trent'anni, con parecchi viaggi alle spalle e — complice la
-        pandemia — gli occhi spalancati per la prima volta, in maniera più profonda, sul paese straordinario che
-        abito. L'Italia è immensa, infinita, eppure si perde tra le pieghe di un mappamondo. Come diceva mio nonno:
-        <span class="font-display italic">"nelle botti piccine ci sta il vino buono."</span>
-      </p>
-      <p>
-        Da lì ho iniziato un viaggio inverso. Ho smesso di viaggiare fuori e ho cominciato a viaggiare dentro — verso
-        le strade poco battute, le storie poco raccontate, gli anfratti dimenticati. Perdermi per ritrovare strade,
-        certezze, idee nuove. Lo scopo di questo blog, di questo canale, è uno solo: prendervi per mano e farvi
-        innamorare della bellezza.
-      </p>
-    </div>
+    <div class="mt-12 flex flex-col gap-10 lg:flex-row lg:items-start">
+      <div class="space-y-5 text-lg leading-relaxed text-ink/75 lg:w-1/2">
+        <p>
+          Questo progetto è nato così: alla soglia dei trent'anni, con parecchi viaggi alle spalle e — complice la
+          pandemia — gli occhi spalancati per la prima volta, in maniera più profonda, sul paese straordinario che
+          abito. L'Italia è immensa, infinita, eppure si perde tra le pieghe di un mappamondo. Come diceva mio nonno:
+          <span class="font-display italic">"nelle botti piccine ci sta il vino buono."</span>
+        </p>
+        <p>
+          Da lì ho iniziato un viaggio inverso. Ho smesso di viaggiare fuori e ho cominciato a viaggiare dentro — verso
+          le strade poco battute, le storie poco raccontate, gli anfratti dimenticati. Perdermi per ritrovare strade,
+          certezze, idee nuove. Lo scopo di questo blog, di questo canale, è uno solo: prendervi per mano e farvi
+          innamorare della bellezza.
+        </p>
+      </div>
 
-    <div class="card mt-10 overflow-hidden p-3">
-      <VideoEmbed youtube-id="ZsL9tD5VBRU" title="Su e giù per l'Italia: un viaggio nelle emozioni" />
+      <div class="card overflow-hidden p-3 lg:w-1/2">
+        <VideoEmbed youtube-id="ZsL9tD5VBRU" title="Su e giù per l'Italia: un viaggio nelle emozioni" />
+      </div>
     </div>
 
     <div class="mt-8 grid gap-4 sm:grid-cols-2">
