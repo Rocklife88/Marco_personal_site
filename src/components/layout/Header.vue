@@ -5,6 +5,13 @@ import Nav from './Nav.vue'
 import Logo from '../Logo.vue'
 
 const theme = ref<string>('')
+const headerEl = ref<HTMLElement | null>(null)
+
+function reportHeaderHeight() {
+  if (headerEl.value) {
+    document.documentElement.style.setProperty('--header-height', `${headerEl.value.offsetHeight}px`)
+  }
+}
 
 function applyTheme(t: string) {
   document.documentElement.setAttribute('data-theme', t)
@@ -22,18 +29,20 @@ onMounted(() => {
     if (saved) {
       theme.value = saved
       applyTheme(saved)
-      return
+    } else {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      theme.value = prefersDark ? 'dark' : 'light'
+      applyTheme(theme.value)
     }
   } catch (e) {}
 
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-  theme.value = prefersDark ? 'dark' : 'light'
-  applyTheme(theme.value)
+  reportHeaderHeight()
+  window.addEventListener('resize', reportHeaderHeight)
 })
 </script>
 
 <template>
-  <header class="sticky top-0 z-20 header-surface shadow-[0_10px_30px_rgba(33,26,22,0.03)] backdrop-blur-xl">
+  <header ref="headerEl" class="sticky top-0 z-20 header-surface shadow-[0_10px_30px_rgba(33,26,22,0.03)] backdrop-blur-xl">
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
       <router-link to="/" class="group flex items-center gap-2.5">
         <Logo :size="34" class="transition group-hover:scale-105" />

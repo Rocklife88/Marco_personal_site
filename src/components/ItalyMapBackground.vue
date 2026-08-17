@@ -43,8 +43,8 @@ const cities = [
       <path d="M130,270 q4,-4 8,0 q4,4 8,0 q4,-4 8,0" stroke-width="0.7" />
     </g>
 
-    <!-- Compass rose -->
-    <g transform="translate(104,300)" fill="none" stroke="currentColor" stroke-width="0.7">
+    <!-- Compass rose, in open water between Sardegna and the mainland -->
+    <g transform="translate(172,295)" fill="none" stroke="currentColor" stroke-width="0.7">
       <circle r="17" />
       <path d="M0,-17 L4,-4 L17,0 L4,4 L0,17 L-4,4 L-17,0 L-4,-4 Z" fill="currentColor" stroke="none" opacity="0.85" />
       <path d="M0,0 L11,-11 M0,0 L11,11 M0,0 L-11,11 M0,0 L-11,-11" stroke-width="0.5" />
@@ -70,10 +70,13 @@ const cities = [
 <style scoped>
 .italy-map-bg {
   position: fixed;
-  inset: 0;
+  top: var(--header-height, 4.5rem);
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   color: var(--ink);
   opacity: 0.1;
   pointer-events: none;
