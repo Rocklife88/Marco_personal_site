@@ -14,6 +14,11 @@ export const config = {
   matcher: '/admin'
 }
 
+// Edge Middleware isn't Node.js, but Vercel statically replaces
+// process.env.X references at build time — @types/node isn't available
+// here, so this just tells TS enough about the shape we actually use.
+declare const process: { env: Record<string, string | undefined> }
+
 export default function middleware(request: Request) {
   const expectedUser = process.env.ADMIN_USER
   const expectedPassword = process.env.ADMIN_PASSWORD
