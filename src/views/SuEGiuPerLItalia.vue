@@ -34,8 +34,8 @@ useHead({
       <p>
         Questo progetto è nato così: alla soglia dei trent'anni, con parecchi viaggi alle spalle e — complice la
         pandemia — gli occhi spalancati per la prima volta, in maniera più profonda, sul paese straordinario che
-        abito. L'Italia è immensa, infinita, eppure si perde tra le pieghe di un mappamondo. Come diceva mio nonno,
-        toscano: <span class="font-display italic">"nelle botti piccine ci sta il vino buono."</span>
+        abito. L'Italia è immensa, infinita, eppure si perde tra le pieghe di un mappamondo. Come diceva mio nonno:
+        <span class="font-display italic">"nelle botti piccine ci sta il vino buono."</span>
       </p>
       <p>
         Da lì ho iniziato un viaggio inverso. Ho smesso di viaggiare fuori e ho cominciato a viaggiare dentro — verso
