@@ -48,16 +48,16 @@ useHead({
       <img
         src="https://mpcopy.wordpress.com/wp-content/uploads/2021/12/74534330_10211782845525349_8983003998860607488_n.jpg"
         alt="Marco Pellegrini"
-        class="absolute inset-0 h-full w-full object-cover"
+        class="hero-image-in absolute inset-0 h-full w-full object-cover"
       />
       <div class="hero-overlay absolute inset-0" />
       <div class="relative mx-auto w-full max-w-6xl px-6 pb-16 pt-32 sm:px-10 sm:pb-20 lg:px-12">
-        <p class="hero-in mb-4 inline-flex w-fit items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-white/90" style="animation-delay: 0s">
-          Scrittore · storie in viaggio
-        </p>
         <h1 class="hero-type text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-7xl">
           Marco Pellegrini
         </h1>
+        <p class="hero-in mt-4 inline-flex w-fit items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-white/90" style="animation-delay: 1.4s">
+          Scrittore · storie in viaggio
+        </p>
       </div>
     </section>
 
