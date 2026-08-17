@@ -39,15 +39,14 @@ useHead({
           e di nuovo in <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-accent hover:underline">In un giorno qualunque</router-link>.
         </p>
         <p>
-          Il motivo per cui scrivo, però, l'ho capito fino in fondo solo un sabato di marzo del 2020, chiuso in una
-          mansarda a Verona, con le finestre spalancate su una città deserta e silenziosa. Avevo bisogno di riportare
-          a galla la bellezza dei viaggi che avevo fatto, per affrontare quei giorni fermi. Da lì è nato
-          <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d'Italia</router-link>,
-          e da lì è nato anche <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
+          Il motivo per cui ho scritto <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d'Italia</router-link>,
+          in particolare, lo so con precisione: un sabato di marzo del 2020, chiuso in una mansarda a Verona, con le
+          finestre spalancate su una città deserta e silenziosa, avevo bisogno di riportare a galla la bellezza dei
+          viaggi che avevo fatto, per affrontare quei giorni fermi. Da lì è nato anche
+          <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
           il progetto che porto avanti insieme al magazine
           <a href="https://www.lordinario.it/luoghi/emozioni-ditalia-1-omaggio-a-lucca/" target="_blank" rel="noopener" class="font-medium text-accent hover:underline">L'Ordinario</a>,
-          per cui scrivo e fotografo i luoghi d'Italia nella rubrica Luoghi. Scrivere, per me, è soprattutto questo:
-          un modo per non perdere quello che si è vissuto.
+          per cui scrivo e fotografo i luoghi d'Italia nella rubrica Luoghi.
         </p>
         <p>
           Ho imparato che una voce, per essere forte, deve essere solo tua. Puoi giocare con lo stile, con le parole,
