@@ -46,7 +46,7 @@ useHead({
     </div>
 
     <div class="card mt-10 overflow-hidden p-3">
-      <VideoEmbed youtube-id="EAZ2kvbesiI" title="Racconti dal canale — Su e giù per l'Italia" />
+      <VideoEmbed youtube-id="ZsL9tD5VBRU" title="Su e giù per l'Italia: un viaggio nelle emozioni" />
     </div>
 
     <div class="mt-8 grid gap-4 sm:grid-cols-2">

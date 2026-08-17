@@ -30,26 +30,25 @@ useHead({
           forma a personaggi ed emozioni non fosse compito mio, ma della pagina.
         </p>
         <p>
-          Mi chiamo Marco Pellegrini, sono nato a Lucca, e da qualche anno provo a raccontare le persone, i luoghi e
-          le idee che meritano attenzione: a volte in un romanzo, a volte in un progetto di viaggio. Mi interessano
-          le realtà artigianali, la cultura locale, tutto ciò che resiste al tempo con autenticità — credo che le
-          parole, se usate bene, sappiano restituire dignità anche al dettaglio più piccolo.
+          Mi chiamo Marco Pellegrini, sono nato a Lucca, e scrivo da sempre — da quando ero all'asilo, molto prima che
+          mi passasse per la testa di pubblicare qualcosa. Ma il motivo per cui lo faccio l'ho capito solo un sabato
+          di marzo del 2020, chiuso in una mansarda a Verona, con le finestre spalancate su una città deserta e
+          silenziosa. Avevo bisogno di riportare a galla la bellezza dei viaggi che avevo fatto, per affrontare quei
+          giorni fermi. Da lì è nato <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d'Italia</router-link>,
+          e da lì ho capito che scrivere, per me, è soprattutto questo: un modo per non perdere quello che si è vissuto.
         </p>
         <p>
-          Dal 2020 ho pubblicato quattro libri: <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>,
-          <router-link to="/libri/quello-che-resta" class="font-medium text-accent hover:underline">Quello che resta</router-link>,
-          <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d’Italia</router-link>
-          e <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-accent hover:underline">In un giorno qualunque</router-link>.
-          Alcuni li trovi anche in audiolibro su
+          Da quel libro ne sono arrivati altri tre —
+          <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>,
+          <router-link to="/libri/quello-che-resta" class="font-medium text-accent hover:underline">Quello che resta</router-link>
+          e <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-accent hover:underline">In un giorno qualunque</router-link>
+          — e alcuni li trovi anche in audiolibro su
           <a href="https://www.audible.it/author/Marco-Pellegrini/B09SF5Z8B5" target="_blank" rel="noopener" class="font-medium text-accent hover:underline">Audible</a>.
-        </p>
-        <p>
-          Parallelamente porto avanti <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l’Italia</router-link>,
-          un progetto fatto di viaggi, video e racconti: il tentativo di restituire quello che la nostra penisola sa
-          mettere dentro il cuore di chi la attraversa. È nato dalla collaborazione con
+          Parallelamente porto avanti <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
+          nato dalla collaborazione con
           <a href="https://www.lordinario.it/luoghi/emozioni-ditalia-1-omaggio-a-lucca/" target="_blank" rel="noopener" class="font-medium text-accent hover:underline">L'Ordinario</a>,
-          il magazine per cui scrivo e fotografo i luoghi d'Italia nella rubrica Luoghi — è lì che tutto questo ha
-          preso forma per la prima volta.
+          il magazine per cui scrivo e fotografo i luoghi d'Italia nella rubrica Luoghi: lo stesso bisogno di prima,
+          raccontato con altri mezzi.
         </p>
         <p>
           Ho imparato che una voce, per essere forte, deve essere solo tua. Puoi giocare con lo stile, con le parole,

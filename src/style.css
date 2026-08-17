@@ -170,6 +170,17 @@ img { display: block; max-width: 100%; }
     );
 }
 
+/* Hero entrance: each element fades and lifts in, staggered via animation-delay */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-in {
+    animation: hero-in 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Accent helpers */
 .accent { color: var(--accent); }
 

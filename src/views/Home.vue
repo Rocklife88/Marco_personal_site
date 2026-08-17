@@ -44,37 +44,33 @@ useHead({
 
 <template>
   <div class="mx-auto max-w-6xl px-6 py-16">
-    <section class="hero-gradient relative overflow-hidden rounded-[32px] border border-ink/5 px-6 py-10 shadow-[0_30px_80px_rgba(33,26,22,0.08)] sm:px-10 lg:px-12">
-      <div class="grid items-center gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-        <div>
-          <p class="eyebrow mb-4"><Compass :size="15" /> Scrittore · storie in viaggio</p>
-          <h1 class="max-w-xl text-4xl font-semibold tracking-tight text-ink sm:text-5xl lg:text-6xl">
-            Scrivere è come partire per un viaggio che non pianifichi.
-          </h1>
-          <p class="mt-5 max-w-2xl text-lg leading-relaxed text-ink/70">
-            Libri e viaggi si somigliano: nessuno dei due si lascia davvero pianificare. Prendono entrambi pieghe
-            impreviste e ti portano dove non immaginavi. Davanti a una pagina bianca non ho mai avuto mappe né
-            bussole — solo la fiducia che la storia sappia da sola dove andare. Scrivo romanzi, racconto luoghi,
-            cerco nei dettagli le storie che meritano di restare.
-          </p>
-          <div class="mt-8 flex flex-wrap gap-3">
-            <router-link to="/blog" class="btn btn-primary">
-              <BookOpen :size="16" /> Leggi il diario di viaggio
-            </router-link>
-            <a v-if="links.youtube" :href="links.youtube" target="_blank" rel="noopener" class="btn btn-outline">
-              <BrandIcon name="youtube" :size="16" /> Iscriviti al canale
-            </a>
-          </div>
-        </div>
-
-        <div class="relative">
-          <div class="overflow-hidden rounded-[28px] border border-surface/60 bg-surface/70 p-3 shadow-[0_24px_60px_rgba(33,26,22,0.12)] backdrop-blur-sm">
-            <img
-              src="https://mpcopy.wordpress.com/wp-content/uploads/2021/12/74534330_10211782845525349_8983003998860607488_n.jpg"
-              alt="Marco Pellegrini"
-              class="h-[420px] w-full rounded-[20px] object-cover object-center"
-            />
-          </div>
+    <section class="relative overflow-hidden rounded-[32px] border border-ink/5 shadow-[0_30px_80px_rgba(33,26,22,0.14)]">
+      <img
+        src="/images/hero/FB6E7B15-95B4-4F74-B66B-4E8FA88AE540.jpg"
+        alt="Marco Pellegrini al lavoro, di notte"
+        class="h-[560px] w-full object-cover sm:h-[620px]"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-black/5" />
+      <div class="absolute inset-0 flex flex-col justify-end p-6 sm:p-10 lg:p-12">
+        <p class="hero-in mb-4 inline-flex w-fit items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-white/90" style="animation-delay: 0s">
+          <Compass :size="15" /> Scrittore · storie in viaggio
+        </p>
+        <h1 class="hero-in max-w-xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl" style="animation-delay: .12s">
+          Scrivere è come partire per un viaggio che non pianifichi.
+        </h1>
+        <p class="hero-in mt-5 max-w-2xl text-lg leading-relaxed text-white/80" style="animation-delay: .24s">
+          Libri e viaggi si somigliano: nessuno dei due si lascia davvero pianificare. Prendono entrambi pieghe
+          impreviste e ti portano dove non immaginavi. Davanti a una pagina bianca non ho mai avuto mappe né
+          bussole — solo la fiducia che la storia sappia da sola dove andare. Scrivo romanzi, racconto luoghi,
+          cerco nei dettagli le storie che meritano di restare.
+        </p>
+        <div class="hero-in mt-8 flex flex-wrap gap-3" style="animation-delay: .36s">
+          <router-link to="/blog" class="btn btn-primary">
+            <BookOpen :size="16" /> Leggi il diario di viaggio
+          </router-link>
+          <a v-if="links.youtube" :href="links.youtube" target="_blank" rel="noopener" class="btn border border-white/40 text-white transition hover:border-white/70 hover:bg-white/10">
+            <BrandIcon name="youtube" :size="16" /> Iscriviti al canale
+          </a>
         </div>
       </div>
     </section>
