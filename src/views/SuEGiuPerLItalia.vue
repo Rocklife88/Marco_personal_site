@@ -60,7 +60,7 @@ useHead({
         <BrandIcon name="youtube" :size="32" class="shrink-0" />
         <span class="flex flex-col gap-1">
           <span class="font-semibold text-ink">Su e giù per l'Italia con Marco</span>
-          <span class="link-arrow">Guarda i video <ArrowRight :size="14" /></span>
+          <span class="link-arrow">Iscriviti al canale e guarda i video <ArrowRight :size="14" /></span>
         </span>
       </a>
       <a
@@ -73,7 +73,7 @@ useHead({
         <LoquisLogo :size="32" class="shrink-0" />
         <span class="flex flex-col gap-1">
           <span class="font-semibold text-ink">Loquis · canale ufficiale</span>
-          <span class="link-arrow">Esplora il viaggio <ArrowRight :size="14" /></span>
+          <span class="link-arrow">Ascolta su Loquis <ArrowRight :size="14" /></span>
         </span>
       </a>
       <a
