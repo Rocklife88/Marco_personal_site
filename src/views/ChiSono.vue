@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
-import { Headphones, ArrowRight } from '@lucide/vue'
 
 useHead({
   title: 'Chi sono — Marco Pellegrini, scrittore',
@@ -31,24 +30,24 @@ useHead({
         </p>
         <p>
           Mi chiamo Marco Pellegrini, sono nato a Lucca, e scrivo da sempre — da quando ero all'asilo, molto prima che
-          mi passasse per la testa di pubblicare qualcosa. Ma il motivo per cui lo faccio l'ho capito solo un sabato
-          di marzo del 2020, chiuso in una mansarda a Verona, con le finestre spalancate su una città deserta e
-          silenziosa. Avevo bisogno di riportare a galla la bellezza dei viaggi che avevo fatto, per affrontare quei
-          giorni fermi. Da lì è nato <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d'Italia</router-link>,
-          e da lì ho capito che scrivere, per me, è soprattutto questo: un modo per non perdere quello che si è vissuto.
+          mi passasse per la testa di pubblicare qualcosa. Ho esordito nel 2020 con
+          <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>,
+          due sconosciuti che si scontrano sul ponte di un traghetto e scoprono di stare cercando, ognuno a modo suo,
+          di rimettere insieme una vita spezzata. È un tema a cui torno spesso: persone sorprese in un punto di
+          svolta, in bilico tra quello che ci si aspetta da loro e quello che sentono davvero di volere. Lo ritrovo in
+          <router-link to="/libri/quello-che-resta" class="font-medium text-accent hover:underline">Quello che resta</router-link>,
+          e di nuovo in <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-accent hover:underline">In un giorno qualunque</router-link>.
         </p>
         <p>
-          Da quel libro ne sono arrivati altri tre —
-          <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>,
-          <router-link to="/libri/quello-che-resta" class="font-medium text-accent hover:underline">Quello che resta</router-link>
-          e <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-accent hover:underline">In un giorno qualunque</router-link>
-          — e alcuni li trovi anche in audiolibro su
-          <a href="https://www.audible.it/author/Marco-Pellegrini/B09SF5Z8B5" target="_blank" rel="noopener" class="font-medium text-accent hover:underline">Audible</a>.
-          Parallelamente porto avanti <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
-          nato dalla collaborazione con
+          Il motivo per cui scrivo, però, l'ho capito fino in fondo solo un sabato di marzo del 2020, chiuso in una
+          mansarda a Verona, con le finestre spalancate su una città deserta e silenziosa. Avevo bisogno di riportare
+          a galla la bellezza dei viaggi che avevo fatto, per affrontare quei giorni fermi. Da lì è nato
+          <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d'Italia</router-link>,
+          e da lì è nato anche <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
+          il progetto che porto avanti insieme al magazine
           <a href="https://www.lordinario.it/luoghi/emozioni-ditalia-1-omaggio-a-lucca/" target="_blank" rel="noopener" class="font-medium text-accent hover:underline">L'Ordinario</a>,
-          il magazine per cui scrivo e fotografo i luoghi d'Italia nella rubrica Luoghi: lo stesso bisogno di prima,
-          raccontato con altri mezzi.
+          per cui scrivo e fotografo i luoghi d'Italia nella rubrica Luoghi. Scrivere, per me, è soprattutto questo:
+          un modo per non perdere quello che si è vissuto.
         </p>
         <p>
           Ho imparato che una voce, per essere forte, deve essere solo tua. Puoi giocare con lo stile, con le parole,
@@ -64,14 +63,6 @@ useHead({
           class="w-full rounded-[28px] object-cover shadow-[0_20px_50px_rgba(33,26,22,0.12)]"
         />
         <p class="mt-3 text-sm text-ink/50">Tra le Dolomiti, durante uno dei viaggi di Su e giù per l'Italia.</p>
-        <a
-          href="https://www.audible.it/author/Marco-Pellegrini/B09SF5Z8B5"
-          target="_blank"
-          rel="noopener"
-          class="link-arrow mt-6"
-        >
-          <Headphones :size="14" /> Ascoltami su Audible <ArrowRight :size="14" />
-        </a>
       </div>
     </div>
   </div>
