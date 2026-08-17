@@ -51,6 +51,22 @@ const cities = [
       <text y="-22" text-anchor="middle" fill="currentColor" stroke="none" font-family="'Fraunces', Georgia, serif" font-size="6">N</text>
     </g>
 
+    <!-- Calamaio e penna d'oca: a nod to the writing -->
+    <g transform="translate(325,100)" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-6,8 L-7,15 Q-7,18 -4,18 L4,18 Q7,18 7,15 L6,8 Z" />
+      <ellipse cx="0" cy="8" rx="6.5" ry="2.2" />
+      <path d="M1,7 Q9,-8 17,-19" stroke-width="1" />
+      <path d="M17,-19 L14,-14 M17,-19 L11,-16" stroke-width="0.6" />
+    </g>
+
+    <!-- Uno zaino, per il viaggio -->
+    <g transform="translate(38,392)" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-9" y="-15" width="18" height="24" rx="5" />
+      <path d="M-9,-6 Q0,-9.5 9,-6" />
+      <path d="M-5,-15 Q-5,-21 0,-21 Q5,-21 5,-15" stroke-width="0.7" />
+      <path d="M-6.5,-15 L-7.5,5 M6.5,-15 L7.5,5" stroke-width="0.6" />
+    </g>
+
     <g fill="currentColor" stroke="none">
       <circle v-for="c in cities" :key="c.name" :cx="c.x" :cy="c.y" r="1.8" />
     </g>
