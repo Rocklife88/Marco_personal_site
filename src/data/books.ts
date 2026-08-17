@@ -27,7 +27,7 @@ const books: Book[] = [
     esordio: true,
     copertina: '/images/covers/17-17.webp',
     sinossi:
-      'Lorenzo e Giulia si scontrano sul ponte di un traghetto in tempesta, di ritorno dall\'Elba. Senza saperlo, hanno qualcosa di importante in comune: stanno entrambi cercando di rimettere insieme i pezzi di una vita interrotta dalla fine di una relazione che li ha segnati. Da quell\'incontro folgorante nasce un romanzo a doppio punto di vista, scandito da un countdown che rincorre l\'orario del titolo, capitolo dopo capitolo, fino al finale circolare a Piazza dei Miracoli, alle 17:17 esatte.',
+      'Lorenzo e Giulia si incontrano sul traghetto di ritorno dall\'Elba e, da quel momento, il tempo sembra avere un orario preciso: 17:17. In una narrativa costruita come un conto alla rovescia, il romanzo segue due vite che si sono già rotte e che, senza saperlo, si stanno ancora cercando. È una storia di secondi, di scelte, di relazioni lasciate a metà e di possibilità che si ripresentano quando meno te lo aspetti.',
     linkStore: {
       ibs: 'https://www.ibs.it/1717-libro-marco-pellegrini/e/9788832106626',
       amazon: 'https://www.amazon.it/17-Marco-Pellegrini/dp/8832106620',
@@ -44,7 +44,7 @@ const books: Book[] = [
     esordio: false,
     copertina: '/images/covers/quello-che-resta.webp',
     sinossi:
-      'Sulle colline di Montecarlo, vicino Lucca, Gaia cresce all\'ombra dell\'azienda vinicola e olearia di famiglia, mentre a poco più di vent\'anni sogna altro. L\'incontro con Giulio, un giovane arrivato da fuori, e una tragedia che le cambia per sempre la vita, la costringono a fare i conti con le proprie radici. Un romanzo su ciò che si perde e ciò che, nonostante tutto, resta — fino a un epilogo che salta una generazione, verso Flora e il futuro che i genitori le hanno lasciato in eredità.',
+      'A Montecarlo, tra vigne e oliveti, Gaia cresce tra le aspettative della famiglia e la volontà di fuggire da un destino già scritto. Quando la vita si spezza in modo imprevedibile, tutto si ribalta: i legami, i ricordi, le persone che davvero contano. Il romanzo racconta la forza di chi prova a ricostruire il proprio futuro senza scordare da dove viene, e la complessità di quel che resta dopo la perdita, quando le radici diventano una forma di resistenza.',
     linkStore: {
       ibs: '',
       amazon: 'https://www.amazon.it/Quello-che-resta-Marco-Pellegrini/dp/8855463233',
@@ -61,7 +61,7 @@ const books: Book[] = [
     esordio: false,
     copertina: '/images/covers/emozioni-ditalia.webp',
     sinossi:
-      'Livorno, l\'Elba, Firenze, Bologna, Venezia, il Sud: un viaggio dell\'autore attraverso l\'Italia, regione dopo regione, raccontato mettendo da parte i campanilismi e scendendo nel dettaglio delle emozioni che ogni tappa suscita. Il memoir più apertamente autobiografico dopo gli esordi, nato dal vero trasferimento a Verona per lavoro: il disegno finale è quello di una cartina intima, una geografia dell\'anima più che dei luoghi.',
+      'Un viaggio vero, fatto di strade, pause, occhi puntati su paesaggi e persone. Da Livorno all\'Elba, da Firenze a Bologna, fino al Sud, il racconto attraversa l\'Italia come una mappa dell\'anima: non per raccontare una guida turistica, ma per restituire ciò che la nostra penisola riesce a provocare dentro. È un memoir in cui il luogo è sempre il pretesto, e l\'emozione diventa il vero protagonista.',
     linkStore: {
       ibs: 'https://www.ibs.it/emozioni-d-italia-libro-marco-pellegrini/e/9788855469791',
       amazon: 'https://www.amazon.it/Emozioni-dItalia-Marco-Pellegrini/dp/8855469797',
@@ -76,9 +76,9 @@ const books: Book[] = [
     editore: 'Argento Vivo Edizioni',
     tipo: 'romanzo',
     esordio: false,
-    copertina: '/images/covers/in-un-giorno-qualunque.webp',
+    copertina: 'http://www.argentovivoedizioni.it/images/libri/qualunque.jpg',
     sinossi:
-      'Alfredo, venditore software disilluso dalla propria vita aziendale, attraversa un\'esperienza di pre-morte che lo mette faccia a faccia con Johnny, la sua voce interiore più sincera e tagliente. Tra dialetto livornese autentico, satira del mondo del lavoro e un amore ritrovato con Marta, il romanzo più maturo dell\'autore: quello in cui l\'ironia, per la prima volta, convive con la resa dei conti.',
+      'C’è una stanchezza che non si misura in ore di sonno. È quella che ti entra nelle ossa quando ogni gesto, ogni parola, ogni sorriso imparato a memoria sembra appartenere a qualcun altro. Alfredo ha trent’anni, una laurea in beni culturali e un lavoro che non gli somiglia. Le sue giornate scorrono tra tangenziali affollate, voci che parlano di budget e obiettivi, colleghi che sembrano reggersi in piedi per abitudine più che per convinzione. E una voce dentro – sempre più insistente – che gli chiede se questa è davvero vita. In un giorno qualunque è il ritratto quieto e crudele di una resa che non fa rumore. Di sogni accantonati per stare al passo, di silenzi mascherati da scelte adulte. Ma anche del momento in cui ci si ferma, si alza la testa, e si capisce che si può ancora cambiare direzione. Basta trovare il coraggio di ascoltarsi davvero.',
     linkStore: {
       ibs: '',
       amazon: '',

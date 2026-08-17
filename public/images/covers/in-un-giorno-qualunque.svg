@@ -1,0 +1,24 @@
+<svg width="800" height="1200" viewBox="0 0 800 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="110" y1="80" x2="700" y2="1100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5E8D6"/>
+      <stop offset="1" stop-color="#B97A48"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="180" y1="150" x2="620" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C1B1A"/>
+      <stop offset="1" stop-color="#563C31"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1200" fill="url(#bg)"/>
+  <rect x="90" y="90" width="620" height="1020" rx="28" fill="#F8F3EE" fill-opacity="0.85"/>
+  <rect x="130" y="130" width="540" height="940" rx="18" fill="url(#accent)"/>
+  <circle cx="560" cy="322" r="194" fill="#D8B08A" fill-opacity="0.26"/>
+  <circle cx="270" cy="830" r="280" fill="#E8D8C7" fill-opacity="0.12"/>
+  <path d="M240 310C328 230 406 216 500 274C570 318 600 386 596 450C592 522 552 594 478 636C423 667 350 668 306 620C250 562 232 488 240 427C248 378 267 333 240 310Z" fill="#E8D8C7" fill-opacity="0.09"/>
+  <text x="400" y="325" text-anchor="middle" fill="#F3E7D9" font-size="34" font-family="Georgia, 'Times New Roman', serif" letter-spacing="8">MARCO PELLEGRINI</text>
+  <text x="400" y="560" text-anchor="middle" fill="#F3E7D9" font-size="88" font-weight="700" font-family="Georgia, 'Times New Roman', serif">IN UN</text>
+  <text x="400" y="660" text-anchor="middle" fill="#F3E7D9" font-size="88" font-weight="700" font-family="Georgia, 'Times New Roman', serif">GIORNO</text>
+  <text x="400" y="760" text-anchor="middle" fill="#F3E7D9" font-size="88" font-weight="700" font-family="Georgia, 'Times New Roman', serif">QUALUNQUE</text>
+  <line x1="230" y1="810" x2="570" y2="810" stroke="#F4E7D5" stroke-width="2" stroke-opacity="0.7"/>
+  <text x="400" y="895" text-anchor="middle" fill="#F4E7D5" font-size="27" font-family="Georgia, 'Times New Roman', serif" letter-spacing="5">ROMANZO</text>
+</svg>

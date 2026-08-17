@@ -1,15 +1,243 @@
 @import 'tailwindcss';
 
+/*
+  Editorial palette for an author/blog site: terracotta + ocra + cream.
+  Tokens are aliased through CSS custom properties so every Tailwind
+  utility generated from them (bg-terracotta, text-terracotta/40,
+  from-terracotta/10, border-ocra/20, bg-cream, text-ink/70, ...) stays
+  on-brand and automatically adapts between light and dark mode.
+*/
+
 @theme {
-  --color-terracotta: #c2542d;
-  --color-terracotta-dark: #9a3f20;
-  --color-ocra: #d99a3f;
-  --color-cream: #faf5ee;
-  --color-ink: #211a16;
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-dark: var(--terracotta-dark);
+  --color-ocra: var(--ocra);
+  --color-azzurro: var(--azzurro);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-serif: 'Lora', ui-serif, Georgia, serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root {
+  color-scheme: light;
+
+  /* Terracotta + ocra (terra, sole) and a Mediterranean azzurro (mare, cielo):
+     the three colors of an Italian journey. */
+  --terracotta: #b0482a;
+  --terracotta-dark: #8a381f;
+  --ocra: #c98f3c;
+  --azzurro: #29708a;
+  --cream: #fffdfa;
+  --ink: #201812;
+  --surface: #ffffff;
+
+  --bg: var(--cream);
+  --accent: var(--terracotta);
+  --accent-dark: var(--terracotta-dark);
+  --muted: rgba(32, 24, 18, 0.62);
+  --border: rgba(32, 24, 18, 0.08);
+  --focus: 3px solid rgba(176, 72, 42, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+
+    --terracotta: #e38052;
+    --terracotta-dark: #b85a2b;
+    --ocra: #e5ae63;
+    --azzurro: #6ec4dd;
+    --cream: #0a0806;
+    --ink: #f2e8dd;
+    --surface: #16110c;
+
+    --bg: var(--cream);
+    --accent: var(--terracotta);
+    --accent-dark: var(--terracotta-dark);
+    --muted: rgba(242, 232, 221, 0.66);
+    --border: rgba(242, 232, 221, 0.1);
+    --focus: 3px solid rgba(227, 128, 82, 0.24);
+  }
+}
+
+/* Explicit override: <html data-theme="dark|light"> wins over the OS preference */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --terracotta: #e38052;
+  --terracotta-dark: #b85a2b;
+  --ocra: #e5ae63;
+  --azzurro: #6ec4dd;
+  --cream: #0a0806;
+  --ink: #f2e8dd;
+  --surface: #16110c;
+
+  --bg: var(--cream);
+  --accent: var(--terracotta);
+  --accent-dark: var(--terracotta-dark);
+  --muted: rgba(242, 232, 221, 0.66);
+  --border: rgba(242, 232, 221, 0.1);
+  --focus: 3px solid rgba(227, 128, 82, 0.24);
+}
+
+:root {
+  font-family: var(--font-serif);
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--ink);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  font-feature-settings: 'ss02' 1;
+}
+
+nav, button, input, select, textarea, .font-sans {
+  font-family: var(--font-sans);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  background: var(--color-cream);
-  color: var(--color-ink);
+  min-width: 320px;
+  background: radial-gradient(circle at top, color-mix(in srgb, var(--accent) 6%, transparent), transparent 28%), var(--bg);
+  color: var(--ink);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+img { display: block; max-width: 100%; }
+#app { min-height: 100vh; }
+
+/* `white`/`black` aren't part of the editorial palette, so keep them mapped
+   to the theme-aware surface/ink so cards and buttons still adapt. */
+.bg-white { background-color: var(--surface) !important; }
+.bg-white\/70 { background-color: color-mix(in srgb, var(--surface) 70%, transparent) !important; }
+.border-white\/60 { border-color: color-mix(in srgb, var(--surface) 60%, transparent) !important; }
+
+/* Header surface helper */
+.header-surface {
+  background-color: color-mix(in srgb, var(--surface) 88%, transparent);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Warm hero gradient used on the homepage, theme-aware */
+.hero-gradient {
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 18%, transparent), transparent 35%),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--surface) 92%, var(--accent) 8%) 0%,
+      var(--surface) 38%,
+      color-mix(in srgb, var(--surface) 85%, var(--ocra) 15%) 100%
+    );
+}
+
+/* Accent helpers */
+.accent { color: var(--accent); }
+
+/* Buttons: a small, consistent set instead of one-off utility strings */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 9999px;
+  padding: 0.65rem 1.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.btn svg { width: 1rem; height: 1rem; }
+
+.btn-accent,
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+.btn-accent:hover,
+.btn-primary:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  color: var(--ink);
+  background: transparent;
+}
+.btn-outline:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  color: var(--accent);
+}
+
+/* Text link with a trailing arrow, used instead of a full button for lighter CTAs */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+.link-arrow svg { width: 1rem; height: 1rem; transition: transform 0.2s ease; }
+.link-arrow:hover svg { transform: translateX(3px); }
+.link-arrow:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Small uppercase tracked label used above headings */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.eyebrow svg { width: 0.95rem; height: 0.95rem; }
+
+/* Editorial card: soft, not heavy — a thin border does the work, the shadow is a whisper */
+.card {
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(20, 14, 8, 0.03);
+}
+
+/* Focus styles for accessibility */
+:is(button, a, input, select, textarea):focus {
+  outline: none;
+  box-shadow: var(--focus);
+  border-radius: 10px;
+}
+
+:is(button, a, input, select, textarea):focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 60%, var(--surface) 40%);
+  outline-offset: 2px;
+}
+
+/* Ensure select has readable contrast */
+select {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
 }

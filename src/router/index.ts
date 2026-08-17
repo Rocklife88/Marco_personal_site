@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { useLoading } from '../composables/useLoading'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -29,9 +30,24 @@ const router = createRouter({
       component: () => import('../views/SuEGiuPerLItalia.vue')
     },
     {
+      path: '/canale',
+      name: 'canale',
+      component: () => import('../views/Canale.vue')
+    },
+    {
       path: '/blog',
       name: 'blog',
       component: () => import('../views/Blog.vue')
+    },
+    {
+      path: '/blog/:slug',
+      name: 'blog-dettaglio',
+      component: () => import('../views/BlogPostDetail.vue')
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: () => import('../views/Admin.vue')
     },
     {
       path: '/contatti',
@@ -42,6 +58,20 @@ const router = createRouter({
   scrollBehavior() {
     return { top: 0 }
   }
+})
+
+const { startLoading, stopLoading } = useLoading()
+
+router.beforeEach(() => {
+  startLoading()
+})
+
+router.afterEach(() => {
+  stopLoading()
+})
+
+router.onError(() => {
+  stopLoading()
 })
 
 export default router

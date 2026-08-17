@@ -1,8 +1,7 @@
 export interface SiteLinks {
   youtube: string
-  altervista: string
-  substack: string
   spotify: string
+  loquis: string
   ibsAutore: string
   amazonAutore: string
   email: string
@@ -10,12 +9,11 @@ export interface SiteLinks {
 
 const links: SiteLinks = {
   youtube: 'https://www.youtube.com/@suegiuperlitaliaconMarco',
-  altervista: 'https://suegiuperlitalia.altervista.org/',
-  substack: '', // URL "MP – parole in cammino"
   spotify: 'https://creators.spotify.com/pod/show/suegiuperlitalia',
+  loquis: 'https://www.loquis.com/it/channel/3269/Su+e+Gi+per+l+Italia+Un+Viaggio+nelle+emozioni',
   ibsAutore: '',
   amazonAutore: '',
-  email: ''
+  email: 'marco.pellegrini2013@gmail.com'
 }
 
 export default links
