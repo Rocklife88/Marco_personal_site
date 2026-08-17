@@ -89,7 +89,7 @@ useHead({
 
     <div v-if="post.sourceUrl" class="mt-10 border-t border-ink/5 pt-8 text-sm text-ink/60">
       <span>Fonte:</span>
-      <a :href="post.sourceUrl" target="_blank" rel="noopener" class="ml-2 font-medium text-terracotta hover:underline">
+      <a :href="post.sourceUrl" target="_blank" rel="noopener" class="ml-2 font-medium text-accent hover:underline">
         articolo originale
       </a>
     </div>

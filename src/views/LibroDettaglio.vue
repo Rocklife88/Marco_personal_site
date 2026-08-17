@@ -53,7 +53,7 @@ useHead({
   <BookDetail v-if="book" :book="book" />
   <div v-else class="mx-auto max-w-3xl px-6 py-16 text-center">
     <p class="text-ink/70">Libro non trovato.</p>
-    <router-link to="/libri" class="mt-4 inline-block text-terracotta hover:underline">
+    <router-link to="/libri" class="mt-4 inline-block text-accent hover:underline">
       Torna ai libri
     </router-link>
   </div>

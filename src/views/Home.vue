@@ -115,7 +115,7 @@ useHead({
         >
           <img :src="post.image" :alt="post.title" class="h-52 w-full object-cover" />
           <div class="p-5">
-            <p class="mb-2 font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-terracotta">{{ getCategory(post) }}</p>
+            <p class="mb-2 font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">{{ getCategory(post) }}</p>
             <h3 class="text-xl font-semibold leading-snug text-ink">{{ post.title }}</h3>
             <p class="mt-3 text-sm leading-relaxed text-ink/70">{{ post.excerpt }}</p>
           </div>
@@ -158,7 +158,7 @@ useHead({
       </div>
     </section>
 
-    <section class="mt-16 rounded-[28px] border border-terracotta/10 bg-gradient-to-br from-terracotta/10 via-cream to-ocra/10 p-8">
+    <section class="mt-16 rounded-[28px] border border-accent/10 bg-gradient-to-br from-terracotta/10 via-cream to-ocra/10 p-8">
       <p class="eyebrow mb-2"><Compass :size="15" /> Progetto</p>
       <h2 class="text-3xl font-semibold tracking-tight text-ink">Su e giù per l'Italia</h2>
       <p class="mt-4 max-w-2xl text-base leading-relaxed text-ink/75">

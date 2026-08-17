@@ -36,7 +36,7 @@ function inviaMessaggio() {
       Per presentazioni, eventi, collaborazioni — o anche solo per dirmi cosa ti ha lasciato una storia: scrivimi.
     </p>
 
-    <form class="mt-10 flex flex-col gap-6" @submit.prevent="inviaMessaggio">
+    <form class="card mt-10 flex flex-col gap-6 p-6 sm:p-8" @submit.prevent="inviaMessaggio">
       <label class="flex flex-col gap-2">
         <span class="inline-flex items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-ink/50">
           <User :size="14" /> Nome
@@ -46,7 +46,7 @@ function inviaMessaggio() {
           type="text"
           required
           placeholder="Il tuo nome"
-          class="border-0 border-b border-ink/15 bg-transparent px-0 py-2 text-ink placeholder:text-ink/30 focus:border-terracotta"
+          class="border-0 border-b border-ink/15 bg-transparent px-0 py-2 text-ink placeholder:text-ink/30 focus:border-accent"
         />
       </label>
 
@@ -59,7 +59,7 @@ function inviaMessaggio() {
           type="email"
           required
           placeholder="nome@esempio.it"
-          class="border-0 border-b border-ink/15 bg-transparent px-0 py-2 text-ink placeholder:text-ink/30 focus:border-terracotta"
+          class="border-0 border-b border-ink/15 bg-transparent px-0 py-2 text-ink placeholder:text-ink/30 focus:border-accent"
         />
       </label>
 
@@ -72,7 +72,7 @@ function inviaMessaggio() {
           rows="5"
           required
           placeholder="Scrivi qui il tuo messaggio..."
-          class="resize-none border-0 border-b border-ink/15 bg-transparent px-0 py-2 text-ink placeholder:text-ink/30 focus:border-terracotta"
+          class="resize-none border-0 border-b border-ink/15 bg-transparent px-0 py-2 text-ink placeholder:text-ink/30 focus:border-accent"
         />
       </label>
 

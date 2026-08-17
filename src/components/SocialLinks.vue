@@ -12,7 +12,7 @@ import LoquisLogo from './icons/LoquisLogo.vue'
       :href="links.youtube"
       target="_blank"
       rel="noopener"
-      class="inline-flex items-center gap-2 text-ink/75 transition hover:text-terracotta"
+      class="inline-flex items-center gap-2 text-ink/75 transition hover:text-accent"
     >
       <BrandIcon name="youtube" :size="16" /> YouTube
     </a>
@@ -21,7 +21,7 @@ import LoquisLogo from './icons/LoquisLogo.vue'
       :href="links.loquis"
       target="_blank"
       rel="noopener"
-      class="inline-flex items-center gap-2 text-ink/75 transition hover:text-terracotta"
+      class="inline-flex items-center gap-2 text-ink/75 transition hover:text-accent"
     >
       <LoquisLogo :size="16" /> Loquis
     </a>
@@ -30,14 +30,14 @@ import LoquisLogo from './icons/LoquisLogo.vue'
       :href="links.spotify"
       target="_blank"
       rel="noopener"
-      class="inline-flex items-center gap-2 text-ink/75 transition hover:text-terracotta"
+      class="inline-flex items-center gap-2 text-ink/75 transition hover:text-accent"
     >
       <BrandIcon name="spotify" :size="16" /> Spotify
     </a>
     <a
       v-if="links.email"
       :href="`mailto:${links.email}`"
-      class="inline-flex items-center gap-2 text-ink/75 transition hover:text-terracotta"
+      class="inline-flex items-center gap-2 text-ink/75 transition hover:text-accent"
     >
       <Mail :size="16" /> Email
     </a>

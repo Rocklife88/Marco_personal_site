@@ -15,8 +15,8 @@ const links = [
       v-for="link in links"
       :key="link.to"
       :to="link.to"
-      class="text-sm font-medium text-ink/75 transition hover:text-terracotta"
-      active-class="text-terracotta"
+      class="text-xs font-semibold uppercase tracking-wider text-ink/70 transition hover:text-accent"
+      active-class="text-accent"
     >
       {{ link.label }}
     </router-link>

@@ -31,7 +31,7 @@ const imageFailed = ref(false)
       </div>
     </div>
     <div class="flex flex-1 flex-col gap-1 p-4">
-      <h3 class="font-display font-semibold leading-snug text-ink group-hover:text-terracotta">
+      <h3 class="font-display font-semibold leading-snug text-ink group-hover:text-accent">
         {{ book.titolo }}
       </h3>
       <p class="font-sans text-sm text-ink/55">{{ book.anno }} &middot; {{ book.editore }}</p>

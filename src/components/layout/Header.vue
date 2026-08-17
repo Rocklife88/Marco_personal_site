@@ -46,7 +46,7 @@ onMounted(() => {
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
       <router-link to="/" class="group flex items-center gap-2.5">
         <Logo :size="34" class="transition group-hover:scale-105" />
-        <span class="font-display text-lg font-semibold italic tracking-tight text-ink transition group-hover:text-terracotta">
+        <span class="font-display text-lg font-semibold italic tracking-tight text-ink transition group-hover:text-accent">
           Marco Pellegrini
         </span>
       </router-link>
@@ -55,7 +55,7 @@ onMounted(() => {
         <button
           @click="toggleTheme"
           :aria-pressed="theme === 'dark'"
-          class="rounded-full border border-ink/10 p-2 text-ink transition hover:border-terracotta/40 hover:text-terracotta"
+          class="rounded-full border border-ink/10 p-2 text-ink transition hover:border-accent/40 hover:text-accent"
           title="Cambia tema chiaro/scuro"
         >
           <Moon v-if="theme === 'dark'" :size="16" />

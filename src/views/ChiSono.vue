@@ -17,7 +17,7 @@ useHead({
 <template>
   <div class="mx-auto max-w-4xl px-6 py-16">
     <header class="mb-10">
-      <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-terracotta">Chi sono</p>
+      <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-accent">Chi sono</p>
       <h1 class="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Le storie ci dicono chi siamo.</h1>
     </header>
 
@@ -36,18 +36,18 @@ useHead({
           parole, se usate bene, sappiano restituire dignità anche al dettaglio più piccolo.
         </p>
         <p>
-          Dal 2020 ho pubblicato quattro libri: <router-link to="/libri/17-17" class="font-medium text-terracotta hover:underline">17:17</router-link>,
-          <router-link to="/libri/quello-che-resta" class="font-medium text-terracotta hover:underline">Quello che resta</router-link>,
-          <router-link to="/libri/emozioni-ditalia" class="font-medium text-terracotta hover:underline">Emozioni d’Italia</router-link>
-          e <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-terracotta hover:underline">In un giorno qualunque</router-link>.
+          Dal 2020 ho pubblicato quattro libri: <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>,
+          <router-link to="/libri/quello-che-resta" class="font-medium text-accent hover:underline">Quello che resta</router-link>,
+          <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d’Italia</router-link>
+          e <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-accent hover:underline">In un giorno qualunque</router-link>.
           Alcuni li trovi anche in audiolibro su
-          <a href="https://www.audible.it/author/Marco-Pellegrini/B09SF5Z8B5" target="_blank" rel="noopener" class="font-medium text-terracotta hover:underline">Audible</a>.
+          <a href="https://www.audible.it/author/Marco-Pellegrini/B09SF5Z8B5" target="_blank" rel="noopener" class="font-medium text-accent hover:underline">Audible</a>.
         </p>
         <p>
-          Parallelamente porto avanti <router-link to="/su-e-giu-per-litalia" class="font-medium text-terracotta hover:underline">Su e giù per l’Italia</router-link>,
+          Parallelamente porto avanti <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l’Italia</router-link>,
           un progetto fatto di viaggi, video e racconti: il tentativo di restituire quello che la nostra penisola sa
           mettere dentro il cuore di chi la attraversa. È nato dalla collaborazione con
-          <a href="https://www.lordinario.it/luoghi/emozioni-ditalia-1-omaggio-a-lucca/" target="_blank" rel="noopener" class="font-medium text-terracotta hover:underline">L'Ordinario</a>,
+          <a href="https://www.lordinario.it/luoghi/emozioni-ditalia-1-omaggio-a-lucca/" target="_blank" rel="noopener" class="font-medium text-accent hover:underline">L'Ordinario</a>,
           il magazine per cui scrivo e fotografo i luoghi d'Italia nella rubrica Luoghi — è lì che tutto questo ha
           preso forma per la prima volta.
         </p>
