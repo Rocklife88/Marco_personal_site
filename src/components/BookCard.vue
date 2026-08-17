@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import type { Book } from '../data/books'
 
-const props = defineProps<{ book: Book }>()
+const props = withDefaults(defineProps<{ book: Book; coverOnly?: boolean }>(), { coverOnly: false })
 
 const imageFailed = ref(false)
 </script>
@@ -12,7 +12,10 @@ const imageFailed = ref(false)
     :to="`/libri/${book.slug}`"
     class="card group flex flex-col overflow-hidden shadow-[0_12px_30px_rgba(33,26,22,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_rgba(33,26,22,0.16)]"
   >
-    <div class="relative aspect-[2/3] w-full overflow-hidden bg-gradient-to-br from-terracotta/15 to-ocra/15">
+    <div
+      class="relative w-full overflow-hidden bg-gradient-to-br from-terracotta/15 to-ocra/15"
+      :class="coverOnly ? 'aspect-[3/4]' : 'aspect-[2/3]'"
+    >
       <div class="absolute inset-y-0 left-0 w-1.5 bg-black/10" />
       <img
         v-if="!imageFailed"
@@ -30,7 +33,7 @@ const imageFailed = ref(false)
         <span class="font-semibold text-ink">{{ book.titolo }}</span>
       </div>
     </div>
-    <div class="flex flex-1 flex-col gap-1 p-4">
+    <div v-if="!coverOnly" class="flex flex-1 flex-col gap-1 p-4">
       <h3 class="font-display font-semibold leading-snug text-ink group-hover:text-accent">
         {{ book.titolo }}
       </h3>
