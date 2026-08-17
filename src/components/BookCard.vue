@@ -10,9 +10,10 @@ const imageFailed = ref(false)
 <template>
   <router-link
     :to="`/libri/${book.slug}`"
-    class="group flex flex-col overflow-hidden rounded-xl border border-ocra/20 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+    class="card group flex flex-col overflow-hidden shadow-[0_12px_30px_rgba(33,26,22,0.08)] transition duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_50px_rgba(33,26,22,0.16)]"
   >
-    <div class="aspect-[2/3] w-full overflow-hidden bg-gradient-to-br from-terracotta/15 to-ocra/15">
+    <div class="relative aspect-[2/3] w-full overflow-hidden bg-gradient-to-br from-terracotta/15 to-ocra/15">
+      <div class="absolute inset-y-0 left-0 w-1.5 bg-black/10" />
       <img
         v-if="!imageFailed"
         :src="book.copertina"
@@ -25,15 +26,15 @@ const imageFailed = ref(false)
         v-else
         class="flex h-full w-full flex-col items-center justify-center gap-2 p-4 text-center"
       >
-        <span class="text-xs uppercase tracking-wide text-ink/40">Marco Pellegrini</span>
+        <span class="font-sans text-xs uppercase tracking-wide text-ink/40">Marco Pellegrini</span>
         <span class="font-semibold text-ink">{{ book.titolo }}</span>
       </div>
     </div>
     <div class="flex flex-1 flex-col gap-1 p-4">
-      <h3 class="font-semibold text-ink group-hover:text-terracotta">
+      <h3 class="font-display font-semibold leading-snug text-ink group-hover:text-terracotta">
         {{ book.titolo }}
       </h3>
-      <p class="text-sm text-ink/60">{{ book.anno }} &middot; {{ book.editore }}</p>
+      <p class="font-sans text-sm text-ink/55">{{ book.anno }} &middot; {{ book.editore }}</p>
     </div>
   </router-link>
 </template>

@@ -153,7 +153,7 @@ useHead({
           v-for="book in books"
           :key="book.slug"
           :book="book"
-          class="w-32 shrink-0 snap-start sm:w-40"
+          class="w-40 shrink-0 snap-start sm:w-52"
         />
       </div>
     </section>
