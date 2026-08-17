@@ -29,6 +29,12 @@ useHead({
           forma a personaggi ed emozioni non fosse compito mio, ma della pagina.
         </p>
         <p>
+          A trent'anni, qualcosa in me è cambiato: ho smesso di essere un viaggiatore pesante. Dalla valigia — e
+          dalla piccola casa in cui vivo — hanno iniziato a sparire un sacco di cose inutili, tenute lì solo per
+          abitudine. Quello che è rimasto è stato spazio nuovo, per le cose che contano davvero. Uso lo stesso
+          principio quando scrivo: togliere il superfluo finché non resta l'essenziale.
+        </p>
+        <p>
           Mi chiamo Marco Pellegrini, sono nato a Lucca, e scrivo da sempre — da quando ero all'asilo, molto prima che
           mi passasse per la testa di pubblicare qualcosa. Ho esordito nel 2020 con
           <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>,
