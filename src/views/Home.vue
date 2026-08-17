@@ -46,8 +46,8 @@ useHead({
   <div>
     <section class="relative flex min-h-[calc(100svh-var(--header-height,4.5rem))] items-end overflow-hidden">
       <img
-        src="/images/hero/FB_IMG_1598869120942.jpg"
-        alt="Marco Pellegrini a un incontro letterario"
+        src="https://mpcopy.wordpress.com/wp-content/uploads/2021/12/74534330_10211782845525349_8983003998860607488_n.jpg"
+        alt="Marco Pellegrini"
         class="absolute inset-0 h-full w-full object-cover"
       />
       <div class="hero-overlay absolute inset-0" />
@@ -83,8 +83,8 @@ useHead({
       <div class="relative">
         <div class="overflow-hidden rounded-[28px] border border-surface/60 bg-surface/70 p-3 shadow-[0_24px_60px_rgba(33,26,22,0.12)] backdrop-blur-sm">
           <img
-            src="https://mpcopy.wordpress.com/wp-content/uploads/2021/12/74534330_10211782845525349_8983003998860607488_n.jpg"
-            alt="Marco Pellegrini"
+            src="/images/hero/FB_IMG_1598869120942.jpg"
+            alt="Marco Pellegrini a un incontro letterario"
             class="h-[420px] w-full rounded-[20px] object-cover object-center"
           />
         </div>
