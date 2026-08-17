@@ -33,7 +33,7 @@ useHead({
   <div class="mx-auto max-w-6xl px-6 py-16">
     <header class="mb-12 max-w-3xl">
       <p class="eyebrow mb-3"><MapPin :size="15" /> Diario di viaggio</p>
-      <h1 class="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Viaggi in Italia, tra ricordi e emozioni</h1>
+      <h1 class="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Viaggi in Italia: un diario emozionale</h1>
       <p class="mt-4 text-lg leading-relaxed text-ink/75">
         Racconti e itinerari nati per strada, non a tavolino: la parte più vera del mio archivio di viaggio,
         raccolta qui in un unico posto.
@@ -63,10 +63,9 @@ useHead({
       >
         <img :src="post.image" :alt="post.title" class="h-64 w-full object-cover" />
         <div class="p-6">
-          <div class="mb-3 flex items-center gap-2 font-sans text-xs uppercase tracking-[0.16em] text-ink/50">
-            <MapPin :size="13" /> <span>{{ getCategory(post) }}</span>
-            <span class="text-ink/30">·</span>
-            <span>{{ post.publishedAt }}</span>
+          <div class="mb-3 flex items-center gap-2">
+            <span class="tag"><MapPin :size="12" /> {{ getCategory(post) }}</span>
+            <span class="font-sans text-xs text-ink/50">{{ post.publishedAt }}</span>
           </div>
           <h2 class="text-2xl font-semibold tracking-tight text-ink">{{ post.title }}</h2>
           <p class="mt-4 text-base leading-relaxed text-ink/70">{{ post.excerpt }}</p>

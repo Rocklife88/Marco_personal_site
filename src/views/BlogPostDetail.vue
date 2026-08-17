@@ -56,12 +56,11 @@ useHead({
     </div>
 
     <header class="mb-10">
-      <div class="mb-4 flex flex-wrap items-center gap-3 font-sans text-xs uppercase tracking-[0.18em] text-ink/50">
-        <span class="inline-flex items-center gap-1.5"><MapPin :size="13" /> {{ getCategory(post) }}</span>
+      <div class="mb-4 flex flex-wrap items-center gap-3">
+        <span class="tag"><MapPin :size="12" /> {{ getCategory(post) }}</span>
+        <span class="font-sans text-xs uppercase tracking-[0.18em] text-ink/50">{{ post.publishedAt }}</span>
         <span class="text-ink/30">·</span>
-        <span>{{ post.publishedAt }}</span>
-        <span class="text-ink/30">·</span>
-        <span class="inline-flex items-center gap-1.5"><Clock :size="13" /> {{ post.readTime }}</span>
+        <span class="inline-flex items-center gap-1.5 font-sans text-xs uppercase tracking-[0.18em] text-ink/50"><Clock :size="13" /> {{ post.readTime }}</span>
       </div>
       <h1 class="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">{{ post.title }}</h1>
     </header>

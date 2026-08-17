@@ -240,6 +240,23 @@ img { display: block; max-width: 100%; }
 }
 .eyebrow svg { width: 0.95rem; height: 0.95rem; }
 
+/* Category pill, used on blog cards/articles */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 9999px;
+  padding: 0.25rem 0.65rem;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  color: var(--accent);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.tag svg { width: 0.8rem; height: 0.8rem; }
+
 /* Editorial card: soft, not heavy — a thin border does the work, the shadow is a whisper.
    Background is translucent with a blur so the map behind stays faintly visible without
    ever fighting the text sitting on top of it. */

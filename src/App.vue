@@ -3,6 +3,7 @@ import Header from './components/layout/Header.vue'
 import Footer from './components/layout/Footer.vue'
 import Loader from './components/Loader.vue'
 import ItalyMapBackground from './components/ItalyMapBackground.vue'
+import CookieBanner from './components/CookieBanner.vue'
 import { useLoading } from './composables/useLoading'
 
 const { isLoading } = useLoading()
@@ -32,5 +33,7 @@ const { isLoading } = useLoading()
         <Loader />
       </div>
     </Transition>
+
+    <CookieBanner />
   </div>
 </template>
