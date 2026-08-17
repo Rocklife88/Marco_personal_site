@@ -4,7 +4,7 @@ const links = [
   { to: '/chi-sono', label: 'Chi sono' },
   { to: '/su-e-giu-per-litalia', label: 'Su e giù per l\'Italia' },
   { to: '/libri', label: 'Libri' },
-  { to: '/blog', label: 'Blog' },
+  { to: '/blog', label: 'Diario di viaggio' },
   { to: '/contatti', label: 'Contatti' }
 ]
 </script>

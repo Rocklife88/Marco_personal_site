@@ -52,7 +52,7 @@ useHead({
 <template>
   <div v-if="post" class="mx-auto max-w-4xl px-6 py-16">
     <div class="mb-8">
-      <router-link to="/blog" class="link-arrow"><ArrowLeft :size="14" /> Torna al blog</router-link>
+      <router-link to="/blog" class="link-arrow"><ArrowLeft :size="14" /> Torna al diario</router-link>
     </div>
 
     <header class="mb-10">
@@ -100,7 +100,7 @@ useHead({
     <h1 class="mt-4 text-4xl font-semibold text-ink">Articolo non trovato</h1>
     <p class="mt-4 text-lg text-ink/70">L'articolo che stai cercando non è disponibile.</p>
     <router-link to="/blog" class="btn btn-primary mt-8">
-      Torna al blog
+      Torna al diario
     </router-link>
   </div>
 </template>

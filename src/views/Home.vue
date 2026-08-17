@@ -59,7 +59,7 @@ useHead({
           </p>
           <div class="mt-8 flex flex-wrap gap-3">
             <router-link to="/blog" class="btn btn-primary">
-              <BookOpen :size="16" /> Leggi il blog
+              <BookOpen :size="16" /> Leggi il diario di viaggio
             </router-link>
             <a v-if="links.youtube" :href="links.youtube" target="_blank" rel="noopener" class="btn btn-outline">
               <BrandIcon name="youtube" :size="16" /> Iscriviti al canale

@@ -32,7 +32,7 @@ useHead({
 <template>
   <div class="mx-auto max-w-6xl px-6 py-16">
     <header class="mb-12 max-w-3xl">
-      <p class="eyebrow mb-3"><MapPin :size="15" /> Blog</p>
+      <p class="eyebrow mb-3"><MapPin :size="15" /> Diario di viaggio</p>
       <h1 class="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Viaggi in Italia, tra ricordi e emozioni</h1>
       <p class="mt-4 text-lg leading-relaxed text-ink/75">
         Racconti e itinerari nati per strada, non a tavolino: la parte più vera del mio archivio di viaggio,

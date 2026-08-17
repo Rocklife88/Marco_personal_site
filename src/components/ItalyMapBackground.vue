@@ -92,21 +92,21 @@
 .italy-map-bg {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   height: 100%;
   color: var(--ink);
-  opacity: 0.05;
+  opacity: 0.16;
   pointer-events: none;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .italy-map-bg {
-    opacity: 0.07;
+    opacity: 0.22;
   }
 }
 
 :root[data-theme='dark'] .italy-map-bg {
-  opacity: 0.07;
+  opacity: 0.22;
 }
 </style>
