@@ -51,11 +51,11 @@ useHead({
         class="hero-image-in absolute inset-0 h-full w-full object-cover"
       />
       <div class="hero-overlay absolute inset-0" />
-      <div class="relative mx-auto w-full max-w-6xl px-6 pb-16 pt-32 sm:px-10 sm:pb-20 lg:px-12">
-        <h1 class="hero-type text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-7xl">
+      <div class="relative mx-auto flex w-full max-w-6xl flex-col items-center px-6 pb-16 pt-32 text-center sm:px-10 sm:pb-20 lg:px-12">
+        <h1 class="hero-type text-5xl font-semibold tracking-tight text-white sm:text-7xl lg:text-8xl">
           Marco Pellegrini
         </h1>
-        <p class="hero-in mt-4 inline-flex w-fit items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-white/90" style="animation-delay: 1.4s">
+        <p class="hero-in mt-5 inline-flex w-fit items-center justify-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-white/90" style="animation-delay: 1.6s">
           Scrittore · storie in viaggio
         </p>
       </div>
