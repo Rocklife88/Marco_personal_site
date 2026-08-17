@@ -23,8 +23,8 @@ useHead({
     <div class="grid gap-10 lg:grid-cols-[1.3fr_0.9fr] lg:items-start">
       <div class="space-y-5 text-lg leading-relaxed text-ink/75">
         <p>
-          Mi chiamo Marco Pellegrini, sono nato a Lucca, e scrivo da sempre — da quando ero all'asilo, molto prima che
-          mi passasse per la testa di pubblicare qualcosa. Ho esordito nel 2020 con
+          Scrivo da sempre — da quando ero all'asilo, molto prima che mi passasse per la testa di pubblicare
+          qualcosa. Sono di Lucca, e ho esordito nel 2020 con
           <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>,
           due sconosciuti che si scontrano sul ponte di un traghetto e scoprono di stare cercando, ognuno a modo suo,
           di rimettere insieme una vita spezzata. È un tema a cui torno spesso: persone sorprese in un punto di
