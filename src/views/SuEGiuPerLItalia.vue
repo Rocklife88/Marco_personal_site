@@ -11,7 +11,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Su e giù per l\'Italia: viaggio nelle emozioni tra luoghi, paesaggi, storie e ricordi dell\'Italia vista da Marco Pellegrini.'
+      content: 'Su e giù per l\'Italia: un viaggio verso dentro, tra strade poco battute e storie poco raccontate, per innamorarsi della bellezza del nostro paese.'
     }
   ]
 })
@@ -23,11 +23,27 @@ useHead({
       <p class="eyebrow mb-3"><Compass :size="15" /> Progetto</p>
       <h1 class="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Su e giù per l'Italia</h1>
       <p class="mt-5 text-lg leading-relaxed text-ink/75">
-        Un viaggio nelle emozioni, tra luoghi, sensazioni e storie. Anche qui vale la regola che uso per i libri:
-        nessuna mappa, nessun itinerario deciso a tavolino. L'Italia non la racconto come una guida, ma come un
-        respiro — fatto di luce, suoni, abitudini, persone, ricordi e piccole meraviglie che lasciano il segno.
+        Viaggiare non è mai banale. Ti ricorda che hai due occhi per vedere il mondo, un palato fatto apposta per
+        scoprire nuovi sapori, orecchie che sanno restituirti un pascolo di montagna o lo sciabordio del mare anche
+        solo chiudendo gli occhi. Mi vedo in movimento da quando ho ricordi: curioso, deciso a scoprire le storie
+        dei posti in cui abito, che visito, di cui mi innamoro.
       </p>
     </header>
+
+    <div class="mt-12 max-w-3xl space-y-5 text-lg leading-relaxed text-ink/75">
+      <p>
+        Questo progetto è nato così: alla soglia dei trent'anni, con parecchi viaggi alle spalle e — complice la
+        pandemia — gli occhi spalancati per la prima volta, in maniera più profonda, sul paese straordinario che
+        abito. L'Italia è immensa, infinita, eppure si perde tra le pieghe di un mappamondo. Come diceva mio nonno,
+        toscano: <span class="font-display italic">"nelle botti piccine ci sta il vino buono."</span>
+      </p>
+      <p>
+        Da lì ho iniziato un viaggio inverso. Ho smesso di viaggiare fuori e ho cominciato a viaggiare dentro — verso
+        le strade poco battute, le storie poco raccontate, gli anfratti dimenticati. Perdermi per ritrovare strade,
+        certezze, idee nuove. Lo scopo di questo blog, di questo canale, è uno solo: prendervi per mano e farvi
+        innamorare della bellezza.
+      </p>
+    </div>
 
     <div class="card mt-10 overflow-hidden p-3">
       <VideoEmbed youtube-id="EAZ2kvbesiI" title="Racconti dal canale — Su e giù per l'Italia" />
