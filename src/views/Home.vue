@@ -46,8 +46,8 @@ useHead({
   <div>
     <section class="relative flex min-h-[calc(100svh-var(--header-height,4.5rem))] items-end overflow-hidden">
       <img
-        src="/images/hero/FB6E7B15-95B4-4F74-B66B-4E8FA88AE540.jpg"
-        alt="Marco Pellegrini al lavoro, di notte"
+        src="/images/hero/FB_IMG_1598869120942.jpg"
+        alt="Marco Pellegrini a un incontro letterario"
         class="absolute inset-0 h-full w-full object-cover"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
@@ -83,8 +83,8 @@ useHead({
       <div class="relative">
         <div class="overflow-hidden rounded-[28px] border border-surface/60 bg-surface/70 p-3 shadow-[0_24px_60px_rgba(33,26,22,0.12)] backdrop-blur-sm">
           <img
-            src="/images/hero/FB_IMG_1598869120942.jpg"
-            alt="Marco Pellegrini a un incontro letterario"
+            src="/images/hero/FB6E7B15-95B4-4F74-B66B-4E8FA88AE540.jpg"
+            alt="Marco Pellegrini al lavoro, di notte"
             class="h-[420px] w-full rounded-[20px] object-cover object-center"
           />
         </div>
