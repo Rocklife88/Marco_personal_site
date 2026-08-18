@@ -125,7 +125,9 @@ useHead({
           :to="`/blog/${post.slug}`"
           class="card block overflow-hidden transition hover:-translate-y-1 hover:shadow-lg"
         >
-          <img :src="post.image" :alt="post.title" class="h-52 w-full object-cover" />
+          <div class="flex h-52 items-center justify-center overflow-hidden bg-ink/[0.03]">
+            <img :src="post.image" :alt="post.title" class="h-full w-full object-contain" />
+          </div>
           <div class="p-5">
             <span class="tag mb-2">{{ getCategory(post) }}</span>
             <h3 class="text-xl font-semibold leading-snug text-ink">{{ post.title }}</h3>

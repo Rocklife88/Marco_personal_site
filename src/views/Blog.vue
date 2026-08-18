@@ -61,7 +61,9 @@ useHead({
         :to="`/blog/${post.slug}`"
         class="card group block overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lg"
       >
-        <img :src="post.image" :alt="post.title" class="h-64 w-full object-cover" />
+        <div class="flex h-64 items-center justify-center overflow-hidden bg-ink/[0.03]">
+          <img :src="post.image" :alt="post.title" class="h-full w-full object-contain" />
+        </div>
         <div class="p-6">
           <div class="mb-3 flex items-center gap-2">
             <span class="tag"><MapPin :size="12" /> {{ getCategory(post) }}</span>
