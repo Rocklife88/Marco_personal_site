@@ -23,26 +23,43 @@ useHead({
     <div class="grid gap-10 lg:grid-cols-[1.3fr_0.9fr] lg:items-start">
       <div class="space-y-5 text-lg leading-relaxed text-ink/75">
         <p>
-          Scrivo da sempre, da quando ero all'asilo, molto prima di sapere cosa significasse davvero scrivere,
-          prima ancora di chiedermi se ne sarebbe mai uscito qualcosa di serio. Sono cresciuto a Lucca, e da lì non
-          mi sono mai davvero mosso, nemmeno quando ho iniziato a girare l'Italia in lungo e in largo: perché in
-          fondo, ho capito col tempo, si scrive sempre dello stesso posto — quello che ci si porta dentro. Nel 2020
-          ho pubblicato il mio primo romanzo,
-          <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>
-          — due sconosciuti che si scontrano sul ponte di un traghetto, ognuno a modo suo in cerca di rimettere
-          insieme una vita spezzata — ed è un tema a cui continuo a tornare, in
-          <router-link to="/libri/quello-che-resta" class="font-medium text-accent hover:underline">Quello che resta</router-link>
-          come in <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-accent hover:underline">In un giorno qualunque</router-link>:
-          persone sorprese in un punto di svolta, in bilico tra quello che ci si aspetta da loro e quello che
-          sentono davvero di volere. Poi c'è stato un sabato di marzo del 2020, chiuso in una mansarda a Verona con
-          le finestre spalancate su una città deserta, e il bisogno improvviso di riportare a galla la bellezza di
-          tutti i viaggi fatti fino ad allora: da lì sono nati
+          A volte mi chiedo come sarebbe la mia vita senza l'urgenza che provo di immaginare personaggi, infilzare
+          assieme parole, raccontare storie, sensazioni, emozioni. Mi chiedo come sarebbe se nonni particolarmente
+          amorevoli non mi avessero iniziato alla dimensione del viaggio, della scoperta, instillando in me una sana
+          necessità di meraviglia.
+        </p>
+        <p>
+          La responsabilità delle parole che hanno finito per aggrumarsi in alcune risme di carta che portano il mio
+          nome impresso su una copertina va ricercata in questi due aspetti: nei libri e nei viaggi. La musica è
+          venuta dopo, diventando parte indissolubile di un trio che rappresenta il nucleo solido di quello che mi
+          caratterizza. Un libro, in un mio ricordo, lo trovo sempre — così come un albero, un prato, un tramonto.
+        </p>
+        <p class="font-display text-2xl italic leading-snug text-ink">
+          Scrivere aiuta anche un po' a vivere. A vivere meglio, a essere più consapevoli, a farsi le domande
+          scomode che servono a evolvere.
+        </p>
+        <p>
+          Scrivo da sempre, molto prima di sapere cosa significasse davvero mettersi a scrivere — se ne sarebbe mai
+          uscito qualcosa di serio non lo sapevo, e forse è meglio così. Sono cresciuto a Lucca, ma è una geografia
+          che conta poco. Quella che conta è la geografia dei miei spostamenti, dei viaggi che ci ridefiniscono e ci
+          accrescono, e che con gli anni, senza che lo cercassi, è diventata anche la geografia dei miei libri.
+        </p>
+        <p>
+          Le parole che si sono aggrumate in
+          <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>,
+          in <router-link to="/libri/quello-che-resta" class="font-medium text-accent hover:underline">Quello che resta</router-link>,
+          in <router-link to="/libri/in-un-giorno-qualunque" class="font-medium text-accent hover:underline">In un giorno qualunque</router-link>:
+          libri che si soffermano sulla difficoltà di scegliere tra qualcosa che sappiamo essere profondamente
+          giusto per noi e le aspettative che il mondo ripone in ciò che facciamo. Scrivo di scelte coraggiose,
+          emozioni intense, bivi che conducono a destinazioni incerte — da raggiungere dopo aver camminato, essere
+          inciampati, attraversato temporali neri come la notte più buia, e tramonti mozzafiato.
+        </p>
+        <p>
+          Il viaggio, quello vero, l'ho messo per intero in
           <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d'Italia</router-link>
-          e, insieme, <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
+          e in <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
           il progetto che porto avanti con il magazine
           <a href="https://www.lordinario.it/luoghi/emozioni-ditalia-1-omaggio-a-lucca/" target="_blank" rel="noopener" class="font-medium text-accent hover:underline">L'Ordinario</a>.
-          Quello che ci trovi non è mai una guida: sono strade, persone e atmosfere raccontate perché chi legge
-          possa riconoscersi — e magari, per un momento, guardare il posto in cui vive con occhi nuovi.
         </p>
       </div>
 
