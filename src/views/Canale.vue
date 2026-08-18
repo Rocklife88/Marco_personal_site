@@ -12,14 +12,14 @@ useHead({ title: 'Il mio canale — Marco Pellegrini' })
 
 <template>
   <div class="mx-auto max-w-6xl px-6 py-16">
-    <header class="mb-8">
+    <header v-reveal class="mb-8">
       <p class="eyebrow mb-3"><Film :size="15" /> Canale</p>
       <h1 class="text-3xl font-semibold text-ink">Il mio canale</h1>
       <p class="mt-3 text-base text-ink/75">I video e gli audio di Su e giù per l'Italia, raccolti in un solo posto: il lato in movimento delle storie che scrivo.</p>
     </header>
 
     <section class="grid gap-8 lg:grid-cols-2">
-      <div class="card overflow-hidden p-3">
+      <div v-reveal class="card overflow-hidden p-3">
         <VideoEmbed :youtube-id="videos[0].id" :title="videos[0].title" />
         <div class="mt-4 flex gap-3 px-1 pb-1">
           <a :href="channelUrl" target="_blank" rel="noopener" class="btn btn-primary">
@@ -31,7 +31,7 @@ useHead({ title: 'Il mio canale — Marco Pellegrini' })
         </div>
       </div>
 
-      <div>
+      <div v-reveal>
         <h2 class="mb-4 text-xl font-semibold text-ink">Ultimi video</h2>
         <div class="grid gap-4 md:grid-cols-1">
           <a

@@ -29,7 +29,7 @@ const bookVideos = computed(() =>
 
 <template>
   <article class="mx-auto max-w-5xl px-6 py-12">
-    <div class="card flex flex-col gap-8 p-6 sm:p-8 lg:flex-row">
+    <div v-reveal class="card flex flex-col gap-8 p-6 sm:p-8 lg:flex-row">
       <div class="aspect-[2/3] w-full max-w-xs self-start overflow-hidden rounded-[22px] bg-gradient-to-br from-terracotta/15 to-ocra/15 shadow">
         <img
           v-if="!imageFailed"

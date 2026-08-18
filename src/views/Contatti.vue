@@ -31,12 +31,14 @@ function inviaMessaggio() {
 
 <template>
   <div class="mx-auto max-w-2xl px-6 py-16">
-    <h1 class="mb-4 text-3xl font-semibold text-ink">Contatti</h1>
-    <p class="leading-relaxed text-ink/80">
-      Per presentazioni, eventi, collaborazioni — o anche solo per dirmi cosa ti ha lasciato una storia: scrivimi.
-    </p>
+    <div v-reveal>
+      <h1 class="mb-4 text-3xl font-semibold text-ink">Contatti</h1>
+      <p class="leading-relaxed text-ink/80">
+        Per presentazioni, eventi, collaborazioni — o anche solo per dirmi cosa ti ha lasciato una storia: scrivimi.
+      </p>
+    </div>
 
-    <form class="card mt-10 flex flex-col gap-6 p-6 sm:p-8" @submit.prevent="inviaMessaggio">
+    <form v-reveal class="card mt-10 flex flex-col gap-6 p-6 sm:p-8" @submit.prevent="inviaMessaggio">
       <label class="flex flex-col gap-2">
         <span class="inline-flex items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-ink/50">
           <User :size="14" /> Nome

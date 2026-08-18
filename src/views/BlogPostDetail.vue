@@ -88,7 +88,7 @@ useHead({
       <router-link to="/blog" class="link-arrow"><ArrowLeft :size="14" /> Torna al diario</router-link>
     </div>
 
-    <header class="mb-10">
+    <header v-reveal class="mb-10">
       <div class="mb-4 flex flex-wrap items-center gap-3">
         <span class="tag"><MapPin :size="12" /> {{ getCategory(post) }}</span>
         <span class="font-sans text-xs uppercase tracking-[0.18em] text-ink/50">{{ post.publishedAt }}</span>
@@ -98,11 +98,11 @@ useHead({
       <h1 class="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">{{ post.title }}</h1>
     </header>
 
-    <div class="mb-8 flex max-h-[520px] items-center justify-center overflow-hidden rounded-[28px] bg-ink/[0.03] shadow-[0_24px_70px_rgba(33,26,22,0.12)]">
+    <div v-reveal class="mb-8 flex max-h-[520px] items-center justify-center overflow-hidden rounded-[28px] bg-ink/[0.03] shadow-[0_24px_70px_rgba(33,26,22,0.12)]">
       <img :src="post.image" :alt="post.title" class="max-h-[520px] w-full object-contain" />
     </div>
 
-    <article class="max-w-none text-ink/80">
+    <article v-reveal class="max-w-none text-ink/80">
       <template v-for="(block, index) in contentBlocks" :key="index">
         <p
           v-if="block.type === 'text' && block.lede"

@@ -31,7 +31,7 @@ useHead({
 
 <template>
   <div class="mx-auto max-w-6xl px-6 py-16">
-    <header class="mb-12 max-w-3xl">
+    <header v-reveal class="mb-12 max-w-3xl">
       <p class="eyebrow mb-3"><MapPin :size="15" /> Diario di viaggio</p>
       <h1 class="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Viaggi in Italia: un diario emozionale</h1>
       <p class="mt-4 text-lg leading-relaxed text-ink/75">
@@ -58,6 +58,7 @@ useHead({
       <router-link
         v-for="post in filteredPosts"
         :key="post.slug"
+        v-reveal
         :to="`/blog/${post.slug}`"
         class="card group block overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-lg"
       >

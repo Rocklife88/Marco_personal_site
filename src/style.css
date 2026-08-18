@@ -236,6 +236,25 @@ img { display: block; max-width: 100%; }
   50% { border-color: transparent; }
 }
 
+/* Paragraph typewriter (v-typewriter): text types itself in on scroll, then a
+   soft caret keeps blinking at the end, like a cursor left in an editor. */
+@media (prefers-reduced-motion: no-preference) {
+  .typewriter.is-typing::after,
+  .typewriter.is-typed::after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    margin-left: 3px;
+    vertical-align: text-bottom;
+    background: var(--accent);
+    animation: typewriter-caret 0.85s step-end infinite;
+  }
+}
+@keyframes typewriter-caret {
+  50% { opacity: 0; }
+}
+
 /* Accent helpers */
 .accent { color: var(--accent); }
 

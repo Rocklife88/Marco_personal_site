@@ -19,7 +19,7 @@ useHead({
 
 <template>
   <div class="mx-auto max-w-5xl px-6 py-16">
-    <header class="max-w-3xl">
+    <header v-reveal class="max-w-3xl">
       <p class="eyebrow mb-3"><Compass :size="15" /> Progetto</p>
       <h1 class="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Su e giù per l'Italia</h1>
       <p class="mt-5 text-lg leading-relaxed text-ink/75">
@@ -31,7 +31,7 @@ useHead({
     </header>
 
     <div class="mt-12 flex flex-col gap-10 lg:flex-row lg:items-start">
-      <div class="space-y-5 text-lg leading-relaxed text-ink/75 lg:w-1/2">
+      <div v-reveal class="space-y-5 text-lg leading-relaxed text-ink/75 lg:w-1/2">
         <p>
           Questo progetto è nato così: alla soglia dei trent'anni, con parecchi viaggi alle spalle e — complice la
           pandemia — gli occhi spalancati per la prima volta, in maniera più profonda, sul paese straordinario che
@@ -46,7 +46,7 @@ useHead({
         </p>
       </div>
 
-      <div class="card overflow-hidden p-3 lg:w-1/2">
+      <div v-reveal class="card overflow-hidden p-3 lg:w-1/2">
         <VideoEmbed youtube-id="ZsL9tD5VBRU" title="Su e giù per l'Italia: un viaggio nelle emozioni" />
       </div>
     </div>
@@ -54,6 +54,7 @@ useHead({
     <div class="mt-8 grid gap-4 sm:grid-cols-2">
       <a
         v-if="links.youtube"
+        v-reveal
         :href="links.youtube"
         target="_blank"
         rel="noopener"
@@ -67,6 +68,7 @@ useHead({
       </a>
       <a
         v-if="links.loquis"
+        v-reveal
         :href="links.loquis"
         target="_blank"
         rel="noopener"
@@ -80,6 +82,7 @@ useHead({
       </a>
       <a
         v-if="links.spotify"
+        v-reveal
         :href="links.spotify"
         target="_blank"
         rel="noopener"

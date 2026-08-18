@@ -16,9 +16,9 @@ useHead({
 
 <template>
   <div class="mx-auto max-w-5xl px-6 py-16">
-    <h1 class="mb-8 text-3xl font-semibold text-ink">I miei libri</h1>
+    <h1 v-reveal class="mb-8 text-3xl font-semibold text-ink">I miei libri</h1>
     <div class="grid grid-cols-2 gap-6 sm:grid-cols-4">
-      <BookCard v-for="book in books" :key="book.slug" :book="book" />
+      <BookCard v-for="book in books" :key="book.slug" v-reveal :book="book" />
     </div>
   </div>
 </template>

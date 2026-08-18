@@ -15,36 +15,36 @@ useHead({
 
 <template>
   <div class="mx-auto max-w-4xl px-6 py-16">
-    <header class="mb-10">
+    <header v-reveal class="mb-10">
       <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-accent">Chi sono</p>
       <h1 class="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">Le storie ci dicono chi siamo.</h1>
     </header>
 
     <div class="grid gap-10 lg:grid-cols-[1.3fr_0.9fr] lg:items-start">
       <div class="space-y-5 text-lg leading-relaxed text-ink/75">
-        <p>
+        <p v-reveal>
           A volte mi chiedo come sarebbe la mia vita senza l'urgenza che provo di immaginare personaggi, infilzare
           assieme parole, raccontare storie, sensazioni, emozioni. Mi chiedo come sarebbe se nonni particolarmente
           amorevoli non mi avessero iniziato alla dimensione del viaggio, della scoperta, instillando in me una sana
           necessità di meraviglia.
         </p>
-        <p>
+        <p v-reveal>
           La responsabilità delle parole che hanno finito per aggrumarsi in alcune risme di carta che portano il mio
           nome impresso su una copertina va ricercata in questi due aspetti: nei libri e nei viaggi. La musica è
           venuta dopo, diventando parte indissolubile di un trio che rappresenta il nucleo solido di quello che mi
           caratterizza. Un libro, in un mio ricordo, lo trovo sempre — così come un albero, un prato, un tramonto.
         </p>
-        <p class="font-display text-2xl italic leading-snug text-ink">
+        <p v-reveal v-typewriter class="font-display text-2xl italic leading-snug text-ink">
           Scrivere aiuta anche un po' a vivere. A vivere meglio, a essere più consapevoli, a farsi le domande
           scomode che servono a evolvere.
         </p>
-        <p>
+        <p v-reveal>
           Scrivo da sempre, molto prima di sapere cosa significasse davvero mettersi a scrivere — se ne sarebbe mai
           uscito qualcosa di serio non lo sapevo, e forse è meglio così. Sono cresciuto a Lucca, ma è una geografia
           che conta poco. Quella che conta è la geografia dei miei spostamenti, dei viaggi che ci ridefiniscono e ci
           accrescono, e che con gli anni, senza che lo cercassi, è diventata anche la geografia dei miei libri.
         </p>
-        <p>
+        <p v-reveal>
           Le parole che si sono aggrumate in
           <router-link to="/libri/17-17" class="font-medium text-accent hover:underline">17:17</router-link>,
           in <router-link to="/libri/quello-che-resta" class="font-medium text-accent hover:underline">Quello che resta</router-link>,
@@ -54,7 +54,7 @@ useHead({
           emozioni intense, bivi che conducono a destinazioni incerte — da raggiungere dopo aver camminato, essere
           inciampati, attraversato temporali neri come la notte più buia, e tramonti mozzafiato.
         </p>
-        <p>
+        <p v-reveal>
           Il viaggio, quello vero, l'ho messo per intero in
           <router-link to="/libri/emozioni-ditalia" class="font-medium text-accent hover:underline">Emozioni d'Italia</router-link>
           e in <router-link to="/su-e-giu-per-litalia" class="font-medium text-accent hover:underline">Su e giù per l'Italia</router-link>,
@@ -63,7 +63,7 @@ useHead({
         </p>
       </div>
 
-      <div class="lg:sticky lg:top-24">
+      <div v-reveal class="lg:sticky lg:top-24">
         <img
           src="/images/blog-import/marco-2.jpg"
           alt="Marco Pellegrini tra le Dolomiti"
