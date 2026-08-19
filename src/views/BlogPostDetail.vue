@@ -102,7 +102,7 @@ useHead({
       <img :src="post.image" :alt="post.title" class="max-h-[520px] w-full object-contain" />
     </div>
 
-    <article v-reveal class="max-w-none text-ink/80">
+    <article class="max-w-none text-ink/80">
       <template v-for="(block, index) in contentBlocks" :key="index">
         <p
           v-if="block.type === 'text' && block.lede"
