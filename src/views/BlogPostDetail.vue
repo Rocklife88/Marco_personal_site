@@ -106,15 +106,16 @@ useHead({
       <template v-for="(block, index) in contentBlocks" :key="index">
         <p
           v-if="block.type === 'text' && block.lede"
-          class="text-xl leading-relaxed text-ink/80"
+          class="text-xl leading-[1.8] text-ink/80"
           v-html="renderInline(block.text)"
         ></p>
         <template v-else-if="block.type === 'text'">
           <template v-for="(sub, subIndex) in splitParagraph(block.text)" :key="subIndex">
             <h2
               v-if="sub.kind === 'h2'"
-              class="mb-4 mt-10 text-2xl font-semibold tracking-tight text-ink sm:text-3xl"
+              class="mb-4 mt-14 flex items-center gap-3 text-3xl font-bold tracking-tight text-ink sm:text-4xl"
             >
+              <span class="h-[3px] w-8 shrink-0 rounded-full bg-accent" aria-hidden="true"></span>
               {{ sub.text }}
             </h2>
             <blockquote
@@ -123,7 +124,7 @@ useHead({
             >
               {{ sub.text }}
             </blockquote>
-            <p v-else class="mt-5 text-lg leading-relaxed text-ink/75" v-html="sub.html"></p>
+            <p v-else class="mt-6 text-lg leading-[1.8] text-ink/75" v-html="sub.html"></p>
           </template>
         </template>
         <div

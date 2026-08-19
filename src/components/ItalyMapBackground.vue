@@ -1,4 +1,6 @@
 <script setup lang="ts">
+withDefaults(defineProps<{ dimmed?: boolean }>(), { dimmed: false })
+
 const cities = [
   { name: 'Dolomiti', x: 181.1, y: 33.2, dx: 4, dy: -2 },
   { name: 'Trieste', x: 232.3, y: 70.6, dx: 4, dy: 2 },
@@ -24,6 +26,7 @@ const cities = [
 <template>
   <svg
     class="italy-map-bg"
+    :class="{ 'italy-map-bg--dimmed': dimmed }"
     viewBox="0 0 391 460"
     preserveAspectRatio="xMidYMid slice"
     aria-hidden="true"
@@ -80,15 +83,29 @@ const cities = [
   color: var(--ink);
   opacity: 0.1;
   pointer-events: none;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.italy-map-bg--dimmed {
+  opacity: 0.035;
+  filter: blur(2.5px);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .italy-map-bg {
     opacity: 0.14;
   }
+
+  :root:not([data-theme='light']) .italy-map-bg--dimmed {
+    opacity: 0.05;
+  }
 }
 
 :root[data-theme='dark'] .italy-map-bg {
   opacity: 0.14;
+}
+
+:root[data-theme='dark'] .italy-map-bg--dimmed {
+  opacity: 0.05;
 }
 </style>

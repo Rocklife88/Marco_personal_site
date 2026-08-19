@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 import Header from './components/layout/Header.vue'
 import Footer from './components/layout/Footer.vue'
 import Loader from './components/Loader.vue'
@@ -7,11 +9,13 @@ import CookieBanner from './components/CookieBanner.vue'
 import { useLoading } from './composables/useLoading'
 
 const { isLoading } = useLoading()
+const route = useRoute()
+const isBlogRoute = computed(() => route.path.startsWith('/blog'))
 </script>
 
 <template>
   <div class="relative flex min-h-screen flex-col">
-    <ItalyMapBackground />
+    <ItalyMapBackground :dimmed="isBlogRoute" />
     <Header />
     <main class="flex-1">
       <router-view />
