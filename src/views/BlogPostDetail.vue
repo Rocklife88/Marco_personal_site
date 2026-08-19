@@ -98,8 +98,8 @@ useHead({
       <h1 class="text-4xl font-semibold tracking-tight text-ink sm:text-5xl">{{ post.title }}</h1>
     </header>
 
-    <div v-reveal class="mb-8 flex max-h-[520px] items-center justify-center overflow-hidden rounded-[28px] bg-ink/[0.03] shadow-[0_24px_70px_rgba(33,26,22,0.12)]">
-      <img :src="post.image" :alt="post.title" class="max-h-[520px] w-full object-contain" />
+    <div v-reveal class="mb-8 flex h-[420px] items-center justify-center overflow-hidden rounded-[28px] bg-ink/[0.03] shadow-[0_24px_70px_rgba(33,26,22,0.12)]">
+      <img :src="post.image" :alt="post.title" class="h-full w-full object-contain" />
     </div>
 
     <article class="max-w-none text-ink/80">
@@ -128,13 +128,13 @@ useHead({
         </template>
         <div
           v-else
-          class="my-8 flex max-h-[420px] items-center justify-center overflow-hidden rounded-[24px] bg-ink/[0.03] shadow-[0_20px_50px_rgba(33,26,22,0.1)] sm:max-h-[480px]"
+          class="my-8 flex h-72 items-center justify-center overflow-hidden rounded-[24px] bg-ink/[0.03] shadow-[0_20px_50px_rgba(33,26,22,0.1)] sm:h-96"
         >
           <img
             :src="block.src"
             :alt="post.title"
             loading="lazy"
-            class="max-h-[420px] w-full object-contain sm:max-h-[480px]"
+            class="h-full w-full object-contain"
           />
         </div>
       </template>
