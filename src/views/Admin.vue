@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, nextTick, ref } from 'vue'
 import { useHead } from '@unhead/vue'
+import { splitParagraph } from '../utils/postFormatting'
 
 useHead({
   title: 'Admin — Marco Pellegrini',
@@ -15,6 +16,7 @@ interface BlogDraft {
   publishedAt: string
   readTime: string
   image: string
+  images: string[]
   category: string
   body: string[]
 }
@@ -27,6 +29,7 @@ const defaultDraft: BlogDraft = {
   publishedAt: '2026',
   readTime: '4 min lettura',
   image: '',
+  images: [],
   category: 'Viaggio',
   body: ['']
 }
@@ -35,6 +38,143 @@ const draft = ref<BlogDraft>({ ...defaultDraft })
 const saved = ref<string[]>([])
 
 const storageKey = 'marco-blog-admin-drafts'
+
+// --- Formatting toolbar (H2 / bold) for the body textareas ---------------
+
+const textareaRefs = ref<(HTMLTextAreaElement | null)[]>([])
+function setTextareaRef(el: Element | null, index: number) {
+  textareaRefs.value[index] = (el as HTMLTextAreaElement) ?? null
+}
+
+function applyFormat(index: number, type: 'h2' | 'bold') {
+  const el = textareaRefs.value[index]
+  const value = draft.value.body[index] ?? ''
+  const start = el?.selectionStart ?? value.length
+  const end = el?.selectionEnd ?? value.length
+  const selected = value.slice(start, end)
+
+  if (type === 'bold') {
+    const insertText = selected || 'testo in grassetto'
+    draft.value.body[index] = value.slice(0, start) + '**' + insertText + '**' + value.slice(end)
+    nextTick(() => {
+      if (!el) return
+      const cursor = start + 2 + insertText.length + 2
+      el.focus()
+      el.setSelectionRange(cursor, cursor)
+    })
+    return
+  }
+
+  // H2: whatever is selected (or a placeholder) becomes the paragraph's first
+  // line, matching the "short first line = heading" rule the site already reads.
+  const headingText = selected || 'Titolo sezione'
+  const rest = (selected ? value.slice(0, start) + value.slice(end) : value).replace(/^\n+/, '')
+  draft.value.body[index] = rest ? `${headingText}\n${rest}` : headingText
+  nextTick(() => {
+    if (!el) return
+    el.focus()
+    el.setSelectionRange(headingText.length, headingText.length)
+  })
+}
+
+// --- Photo upload straight to the project's public/images folder ---------
+// Uses the File System Access API (Chrome/Edge only) to write files directly
+// to disk from the browser, with no backend/server involved.
+
+interface FSWritable {
+  write: (data: Blob) => Promise<void>
+  close: () => Promise<void>
+}
+interface FSFileHandle {
+  createWritable: () => Promise<FSWritable>
+}
+interface FSDirHandle {
+  getFileHandle: (name: string, options?: { create?: boolean }) => Promise<FSFileHandle>
+}
+declare global {
+  interface Window {
+    showDirectoryPicker?: (options?: { id?: string; mode?: 'read' | 'readwrite' }) => Promise<FSDirHandle>
+  }
+}
+
+const canSaveLocally = typeof window !== 'undefined' && 'showDirectoryPicker' in window
+const imagesDirHandle = ref<FSDirHandle | null>(null)
+const uploadStatus = ref('')
+const uploadError = ref('')
+
+async function pickImagesFolder() {
+  uploadError.value = ''
+  try {
+    imagesDirHandle.value = await window.showDirectoryPicker!({ id: 'blog-images', mode: 'readwrite' })
+    uploadStatus.value = 'Cartella collegata: ora puoi caricare le foto.'
+  } catch {
+    // The user closed the picker without choosing a folder — nothing to do.
+  }
+}
+
+const diacriticsPattern = new RegExp(`[${String.fromCharCode(0x300)}-${String.fromCharCode(0x36f)}]`, 'g')
+
+function sanitizeFilename(name: string) {
+  const dot = name.lastIndexOf('.')
+  const base = dot > 0 ? name.slice(0, dot) : name
+  const ext = dot > 0 ? name.slice(dot).toLowerCase() : ''
+  const cleanBase = base
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(diacriticsPattern, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+  return `${cleanBase || 'foto'}${ext}`
+}
+
+async function saveFileToProject(file: File): Promise<string> {
+  if (!imagesDirHandle.value) throw new Error('Collega prima la cartella immagini del progetto.')
+  const filename = `${Date.now()}-${sanitizeFilename(file.name)}`
+  const fileHandle = await imagesDirHandle.value.getFileHandle(filename, { create: true })
+  const writable = await fileHandle.createWritable()
+  await writable.write(file)
+  await writable.close()
+  return `/images/blog-import/${filename}`
+}
+
+async function onCoverFileChange(event: Event) {
+  const input = event.target as HTMLInputElement
+  const file = input.files?.[0]
+  input.value = ''
+  if (!file) return
+
+  uploadError.value = ''
+  try {
+    draft.value.image = await saveFileToProject(file)
+    uploadStatus.value = `Copertina salvata in ${draft.value.image}`
+  } catch (err) {
+    uploadError.value = err instanceof Error ? err.message : 'Errore nel salvataggio della foto.'
+  }
+}
+
+async function onGalleryFilesChange(event: Event) {
+  const input = event.target as HTMLInputElement
+  const files = Array.from(input.files ?? [])
+  input.value = ''
+  if (!files.length) return
+
+  uploadError.value = ''
+  let added = 0
+  for (const file of files) {
+    try {
+      draft.value.images.push(await saveFileToProject(file))
+      added += 1
+    } catch (err) {
+      uploadError.value = err instanceof Error ? err.message : 'Errore nel salvataggio di una foto.'
+      break
+    }
+  }
+  if (added) uploadStatus.value = `${added} foto aggiunte alla galleria.`
+}
+
+function removeGalleryImage(index: number) {
+  draft.value.images.splice(index, 1)
+}
 
 function slugify(value: string) {
   return value
@@ -85,6 +225,8 @@ function loadSaved() {
 
 const previewCode = computed(() => {
   const body = draft.value.body.filter((p) => p.trim().length > 0)
+  const cover = draft.value.image || '/images/placeholder.jpg'
+  const gallery = [cover, ...draft.value.images.filter(Boolean)]
   return JSON.stringify(
     {
       slug: draft.value.slug || slugify(draft.value.title),
@@ -93,7 +235,8 @@ const previewCode = computed(() => {
       region: draft.value.region,
       publishedAt: draft.value.publishedAt,
       readTime: draft.value.readTime,
-      image: draft.value.image || '/images/placeholder.jpg',
+      image: cover,
+      images: gallery,
       sourceUrl: `https://suegiuperlitalia.altervista.org/${draft.value.slug || slugify(draft.value.title)}/`,
       body
     },
@@ -110,7 +253,7 @@ loadSaved()
     <header class="mb-10 text-center">
       <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-accent">Admin</p>
       <h1 class="text-4xl font-semibold tracking-tight text-ink">Nuovo articolo blog</h1>
-      <p class="mt-3 text-ink/70">Editor semplice, senza backend. Tutto resta in locale e può essere esportato in JSON o copiado in un file.</p>
+      <p class="mt-3 text-ink/70">Editor semplice, senza backend. Tutto resta in locale e può essere esportato in JSON o copiato in un file.</p>
     </header>
 
     <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
@@ -149,9 +292,56 @@ loadSaved()
           </div>
         </div>
 
-        <div>
-          <label class="mb-2 block text-sm font-medium text-ink">URL immagine</label>
-          <input v-model="draft.image" class="w-full rounded-2xl border border-ink/10 bg-cream px-4 py-3 outline-none focus:border-accent" placeholder="/images/blog-import/xxx.jpg o https://..." />
+        <div class="rounded-2xl border border-ink/10 bg-cream/60 p-4">
+          <label class="mb-2 block text-sm font-medium text-ink">Foto</label>
+
+          <p v-if="!canSaveLocally" class="mb-3 rounded-xl bg-ocra/10 px-3 py-2 text-xs text-ink/70">
+            Il tuo browser non supporta il salvataggio diretto dei file (funziona solo su Chrome/Edge desktop). Puoi comunque scrivere a mano il percorso dell'immagine qui sotto, dopo aver copiato il file in <code>public/images/blog-import/</code>.
+          </p>
+
+          <div v-if="canSaveLocally" class="mb-3 flex flex-wrap items-center gap-3">
+            <button type="button" @click="pickImagesFolder" class="rounded-full border border-accent/30 bg-accent/5 px-3 py-1.5 text-xs font-medium text-accent">
+              {{ imagesDirHandle ? 'Cambia cartella immagini' : 'Collega cartella "public/images/blog-import"' }}
+            </button>
+            <span v-if="imagesDirHandle" class="text-xs text-ink/50">Cartella collegata ✓</span>
+          </div>
+          <p v-if="uploadStatus" class="mb-3 text-xs text-accent">{{ uploadStatus }}</p>
+          <p v-if="uploadError" class="mb-3 text-xs text-red-600">{{ uploadError }}</p>
+
+          <div class="mb-4">
+            <label class="mb-1 block text-xs font-medium text-ink/70">Copertina</label>
+            <div class="flex flex-wrap items-center gap-3">
+              <img v-if="draft.image" :src="draft.image" alt="Copertina" class="h-16 w-24 rounded-lg object-cover" />
+              <input
+                v-if="canSaveLocally"
+                type="file"
+                accept="image/*"
+                :disabled="!imagesDirHandle"
+                @change="onCoverFileChange"
+                class="text-xs text-ink/70 file:mr-3 file:rounded-full file:border-0 file:bg-accent file:px-3 file:py-1.5 file:text-xs file:font-medium file:text-white disabled:opacity-40"
+              />
+            </div>
+            <input v-model="draft.image" class="mt-2 w-full rounded-2xl border border-ink/10 bg-cream px-4 py-3 text-sm outline-none focus:border-accent" placeholder="/images/blog-import/xxx.jpg o https://..." />
+          </div>
+
+          <div>
+            <label class="mb-1 block text-xs font-medium text-ink/70">Galleria (foto nel corpo dell'articolo)</label>
+            <input
+              v-if="canSaveLocally"
+              type="file"
+              accept="image/*"
+              multiple
+              :disabled="!imagesDirHandle"
+              @change="onGalleryFilesChange"
+              class="mb-3 text-xs text-ink/70 file:mr-3 file:rounded-full file:border-0 file:bg-accent file:px-3 file:py-1.5 file:text-xs file:font-medium file:text-white disabled:opacity-40"
+            />
+            <div v-if="draft.images.length" class="flex flex-wrap gap-2">
+              <div v-for="(src, i) in draft.images" :key="src + i" class="group relative">
+                <img :src="src" alt="" class="h-16 w-16 rounded-lg object-cover" />
+                <button type="button" @click="removeGalleryImage(i)" class="absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-ink text-[10px] text-white opacity-80 hover:opacity-100">✕</button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div>
@@ -160,9 +350,32 @@ loadSaved()
             <button type="button" @click="addParagraph" class="rounded-full border border-accent/30 bg-accent/5 px-3 py-1.5 text-xs font-medium text-accent">+ paragrafo</button>
           </div>
 
-          <div v-for="(_, index) in draft.body" :key="index" class="mb-3 flex gap-3">
-            <textarea v-model="draft.body[index]" rows="4" class="w-full rounded-2xl border border-ink/10 bg-cream px-4 py-3 outline-none focus:border-accent" :placeholder="`Paragrafo ${index + 1}`" />
-            <button v-if="draft.body.length > 1" type="button" @click="removeParagraph(index)" class="self-start rounded-full border border-ink/10 px-2 py-1 text-xs text-ink/60">Rimuovi</button>
+          <div v-for="(_, index) in draft.body" :key="index" class="mb-4 rounded-2xl border border-ink/10 bg-cream/60 p-3">
+            <div class="mb-2 flex items-center justify-between">
+              <div class="flex items-center gap-1.5">
+                <button type="button" @click="applyFormat(index, 'h2')" title="Rendi la selezione un titolo H2" class="rounded-lg border border-ink/10 bg-white px-2 py-1 text-xs font-bold text-ink/70 hover:border-accent hover:text-accent">H2</button>
+                <button type="button" @click="applyFormat(index, 'bold')" title="Grassetto" class="rounded-lg border border-ink/10 bg-white px-2 py-1 text-xs font-bold italic text-ink/70 hover:border-accent hover:text-accent">B</button>
+                <span class="ml-1 text-xs text-ink/40">Paragrafo {{ index + 1 }}</span>
+              </div>
+              <button v-if="draft.body.length > 1" type="button" @click="removeParagraph(index)" class="text-xs text-ink/50 hover:text-red-600">Rimuovi</button>
+            </div>
+
+            <textarea
+              :ref="(el) => setTextareaRef(el as Element | null, index)"
+              v-model="draft.body[index]"
+              rows="4"
+              class="w-full rounded-2xl border border-ink/10 bg-white px-4 py-3 outline-none focus:border-accent"
+              :placeholder="`Paragrafo ${index + 1}. Seleziona del testo e premi H2 o B, oppure scrivi **grassetto** a mano.`"
+            />
+
+            <div v-if="draft.body[index].trim()" class="mt-2 rounded-xl bg-white/70 px-3 py-2">
+              <p class="mb-1 text-[10px] font-medium uppercase tracking-[0.15em] text-ink/40">Anteprima</p>
+              <template v-for="(sub, si) in splitParagraph(draft.body[index])" :key="si">
+                <p v-if="sub.kind === 'h2'" class="text-base font-bold text-ink">{{ sub.text }}</p>
+                <p v-else-if="sub.kind === 'quote'" class="border-l-2 border-accent/40 pl-2 text-sm italic text-ink/70">{{ sub.text }}</p>
+                <p v-else class="text-sm text-ink/70" v-html="sub.html"></p>
+              </template>
+            </div>
           </div>
         </div>
 
