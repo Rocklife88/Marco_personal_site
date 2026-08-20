@@ -79,7 +79,7 @@ const cities = [
   bottom: 0;
   z-index: 0;
   width: 100%;
-  height: 100%;
+  height: calc(100% - var(--header-height, 4.5rem));
   color: var(--ink);
   opacity: 0.1;
   pointer-events: none;
