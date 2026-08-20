@@ -15,6 +15,7 @@ export interface Book {
   copertina: string
   sinossi: string
   linkStore: LinkStore
+  hideVideoSection?: boolean
 }
 
 const books: Book[] = [
@@ -81,10 +82,11 @@ const books: Book[] = [
       'C’è una stanchezza che non si misura in ore di sonno. È quella che ti entra nelle ossa quando ogni gesto, ogni parola, ogni sorriso imparato a memoria sembra appartenere a qualcun altro. Alfredo ha trent’anni, una laurea in beni culturali e un lavoro che non gli somiglia. Le sue giornate scorrono tra tangenziali affollate, voci che parlano di budget e obiettivi, colleghi che sembrano reggersi in piedi per abitudine più che per convinzione. E una voce dentro – sempre più insistente – che gli chiede se questa è davvero vita. In un giorno qualunque è il ritratto quieto e crudele di una resa che non fa rumore. Di sogni accantonati per stare al passo, di silenzi mascherati da scelte adulte. Ma anche del momento in cui ci si ferma, si alza la testa, e si capisce che si può ancora cambiare direzione. Basta trovare il coraggio di ascoltarsi davvero.',
     linkStore: {
       ibs: '',
-      amazon: '',
+      amazon: 'https://www.amazon.it/dp/B0GL5LKV4S',
       mondadori: '',
       feltrinelli: ''
-    }
+    },
+    hideVideoSection: true
   }
 ]
 

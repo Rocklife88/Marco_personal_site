@@ -69,7 +69,7 @@ const bookVideos = computed(() =>
           </a>
         </div>
 
-        <div class="rounded-2xl border border-ink/5 bg-ink/[0.02] p-4">
+        <div v-if="!book.hideVideoSection" class="rounded-2xl border border-ink/5 bg-ink/[0.02] p-4">
           <div class="mb-3 flex items-center justify-between gap-3">
             <p class="font-sans text-sm font-medium text-ink">Guarda anche</p>
             <a
